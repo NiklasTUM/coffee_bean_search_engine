@@ -1,25 +1,41 @@
 import logging
-from logging import Logger
+import os
 
 
-class RAGLogger(Logger):
+class RAGLogger:
+    def __init__(self, log_dir: str = 'logs', log_file: str = 'RAG.log'):
+        """
+        Initializes the RAGLogger instance and sets up the logger.
 
-    @staticmethod
-    def setup_logger() -> Logger:
+        Args:
+            log_dir (str): Directory where the log file will be stored.
+            log_file (str): Name of the log file.
+        """
+        self.log_dir = log_dir
+        self.log_file = log_file
+        self.logger = self._setup_logger()
+
+    def _setup_logger(self) -> logging.Logger:
         """
         Sets up a logger with console and file handlers.
+        Automatically creates the log directory if it does not exist.
 
         Returns:
             Logger: The logger with console and file handlers.
         """
         logger = logging.getLogger(__name__)
+
         if logger.hasHandlers():
             return logger
 
         logger.setLevel(logging.DEBUG)
 
+        # Ensure the log directory exists
+        os.makedirs(self.log_dir, exist_ok=True)
+
         console_handler = logging.StreamHandler()
-        file_handler = logging.FileHandler('logs/apicaller.log')
+        log_file_path = os.path.join(self.log_dir, self.log_file)
+        file_handler = logging.FileHandler(log_file_path)
 
         console_handler.setLevel(logging.INFO)
         file_handler.setLevel(logging.DEBUG)

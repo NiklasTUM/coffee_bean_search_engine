@@ -24,7 +24,7 @@ class AnswerGenerator:
         Args:
             logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
         """
-        self.logger = logger or RAGLogger.setup_logger()
+        self.logger = logger or RAGLogger('logs', 'RAG.log').logger
         self.api_key = constants.huggingface_api_key
         self.api_url = constants.mistral_7B_instruct_api_url
         self.client = self._initialize_client()
@@ -75,7 +75,7 @@ class AnswerGenerator:
 
 if __name__ == "__main__":
     try:
-        answer_generator = AnswerGenerator(RAGLogger.setup_logger())
+        answer_generator = AnswerGenerator()
         prompt = [{"role": "user", "content": "What is the capital of France?"}]
         answer = answer_generator.inference(prompt)
         print(answer)
