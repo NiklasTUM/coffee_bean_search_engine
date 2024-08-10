@@ -1,0 +1,6 @@
+.venv
+.idea
+.env
+
+RAG-based Knowledge Extraction Challenge_Description.pdf
+/logs/apicaller.log
