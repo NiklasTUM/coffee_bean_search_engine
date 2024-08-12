@@ -2,11 +2,12 @@ import logging
 from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
+
 from RAGLogger import RAGLogger
 from constants import constants
 
 
-class AnswerGenerator:
+class LLMInference:
     """
     A class to generate answers using a language model via the Hugging Face Inference API.
 
@@ -75,7 +76,7 @@ class AnswerGenerator:
 
 if __name__ == "__main__":
     try:
-        answer_generator = AnswerGenerator()
+        answer_generator = LLMInference()
         prompt = [{"role": "user", "content": "What is the capital of France?"}]
         answer = answer_generator.inference(prompt)
         print(answer)
