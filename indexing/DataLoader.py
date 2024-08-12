@@ -2,7 +2,7 @@ import os
 import logging
 
 from langchain_core.documents import Document
-
+from constants import constants
 from RAGLogger import RAGLogger
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 
@@ -19,7 +19,8 @@ class DataLoader:
             logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
         """
         self.directory = directory
-        self.logger = logger or RAGLogger().logger
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         nltk.download('punkt_tab')
         nltk.download('averaged_perceptron_tagger_eng')
 
@@ -75,7 +76,8 @@ class DataLoader:
 
 if __name__ == "__main__":
     logger_instance = RAGLogger().logger
-    data_loader = DataLoader("../data", logger=logger_instance)
+    data_path = os.path.join(constants.root_dir, "data")
+    data_loader = DataLoader(data_path, logger=logger_instance)
     markdown_data = data_loader.load_data()
 
     for index, content in enumerate(markdown_data):

@@ -37,5 +37,3 @@ class VectorStore:
         vector_store = PineconeVectorStore(index=vs_index_name, embedding=embeddings)
 
         return vector_store
-
-

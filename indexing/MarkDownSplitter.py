@@ -1,4 +1,5 @@
 import logging
+import os.path
 
 import nltk
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -7,6 +8,8 @@ from langchain_text_splitters import MarkdownHeaderTextSplitter
 
 from RAGLogger import RAGLogger
 from indexing.DataLoader import DataLoader
+
+from constants import constants
 
 
 class MarkDownSplitter:
@@ -17,7 +20,8 @@ class MarkDownSplitter:
         Args:
             logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
         """
-        self.logger = logger or RAGLogger().logger
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         nltk.download('punkt')
 
     def header_splitter(self, markdown_document: Document) -> list[Document]:
@@ -60,15 +64,15 @@ class MarkDownSplitter:
 
     def hybrid_split(self, markdown_document: Document) -> list[Document]:
         """
-        Splits markdown text first hierarchically, then semantically.
+        Splits markdown document first hierarchically, then recursively on character level.
 
         Args:
-            markdown_text (str): The markdown text to be split.
+            markdown_document (Document): The markdown text to be split.
 
         Returns:
-            list: A list of final chunks after hierarchical and semantic splitting.
+            list: A list of final chunks after hierarchical and recursive character splitting.
         """
-        self.logger.info("Starting full markdown splitting (hierarchical and semantic).")
+        self.logger.info("Starting full markdown splitting (hierarchical and character).")
         try:
             hierarchical_chunks = self.header_splitter(markdown_document)
             final_chunks = []

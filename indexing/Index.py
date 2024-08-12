@@ -1,24 +1,28 @@
-import time
+import os
 
+import langchain.indexes
 from langchain.indexes import SQLRecordManager, index
-from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_pinecone import PineconeVectorStore as pc
-from pinecone import ServerlessSpec
 
 from RAGLogger import RAGLogger
+from constants import constants
 from indexing.DataLoader import DataLoader
 from indexing.MarkDownSplitter import MarkDownSplitter
 from indexing.VectorStore import VectorStore
 
 
 class Index:
-    def __init__(self):
+    def __init__(self, logger: RAGLogger):
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         self.record_manager = self.initialize_record_manager()
         self.vector_store = VectorStore().create_vectorstore()
+        self.data_path = os.path.join(constants.root_dir, "data")
+        self.data_loader = DataLoader(self.data_path, self.logger)
+        self.markdown_splitter = MarkDownSplitter(self.logger)
 
-    def initialize_record_manager(self):
+    @staticmethod
+    def initialize_record_manager():
         namespace = "RAGChallenge"
         record_manager = SQLRecordManager(
             namespace, db_url="sqlite:///record_manager_cache.sql"
@@ -28,9 +32,9 @@ class Index:
 
         return record_manager
 
-    def add_chunk_to_index(self, chunk: Document):
+    def add_chunk_to_index(self, chunk_doc: list[Document]):
         index(
-            [chunk],
+            chunk_doc,
             self.record_manager,
             self.vector_store,
             cleanup="incremental",
@@ -38,31 +42,26 @@ class Index:
         )
 
 
-if __name__=='__main__':
+    def index_documents(self):
+        loaded_documents = self.data_loader.load_data()
+        chunks = []
+        for doc in loaded_documents:
+            chunks.extend(self.markdown_splitter.hybrid_split(doc))
+
+        self.add_chunk_to_index(chunks)
+
+
+if __name__ == '__main__':
     rag_logger = RAGLogger().logger
-    data_loader = DataLoader('../data', rag_logger)
+    data_path = os.path.join(constants.root_dir, "data")
+    data_loader = DataLoader(data_path, logger=rag_logger)
     markdown_splitter = MarkDownSplitter(rag_logger)
-    my_index = Index()
+    my_index = Index(rag_logger)
 
     data = data_loader.load_data()
-    md_doc = data[0]
 
     # Perform the splitting
     try:
-        final_chunks = markdown_splitter.hybrid_split(md_doc)
-        for chunk in final_chunks:
-            my_index.add_chunk_to_index(chunk)
-            break
-
-        print(index)
+        my_index.index_documents()
     except Exception as e:
         rag_logger.error(f"Error: {e}")
-
-
-
-
-
-
-
-
-
