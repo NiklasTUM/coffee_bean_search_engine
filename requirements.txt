@@ -5,3 +5,5 @@ nltk~=3.8.2
 requests~=2.32.3
 peft
 numpy~=1.26.4
+streamlit~=1.37.1
+langchain-pinecone

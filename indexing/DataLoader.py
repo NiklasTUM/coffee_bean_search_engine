@@ -63,15 +63,17 @@ class DataLoader:
             self.logger.error(f"Error while reading file {file_path}: {e}")
             raise
 
-    def _read_file_langchain(self, file_path: str) -> Document:
-        try:
-            md_doc = UnstructuredMarkdownLoader(file_path)
-            loaded_data = md_doc.load()
-            self.logger.info(f"Successfully read file: {file_path}")
-            return loaded_data[0]
-        except Exception as e:
-            self.logger.error(f"Error while reading file {file_path}: {e}")
-            raise
+    # UnstructuredMarkdownLoader from langchain is very slow, thus, the above custom method is used to load the
+    # Markdown files
+    # def _read_file_langchain(self, file_path: str) -> Document:
+    #     try:
+    #         md_doc = UnstructuredMarkdownLoader(file_path)
+    #         loaded_data = md_doc.load()
+    #         self.logger.info(f"Successfully read file: {file_path}")
+    #         return loaded_data[0]
+    #     except Exception as e:
+    #         self.logger.error(f"Error while reading file {file_path}: {e}")
+    #         raise
 
 
 if __name__ == "__main__":
@@ -80,5 +82,5 @@ if __name__ == "__main__":
     data_loader = DataLoader(data_path, logger=logger_instance)
     markdown_data = data_loader.load_data()
 
-    for index, content in enumerate(markdown_data):
-        print(f"Content of file {index + 1}:\n{content}...\n")
+    for index, doc_content in enumerate(markdown_data):
+        print(f"Content of file {index + 1}:\n{doc_content}...\n")

@@ -77,8 +77,8 @@ class LLMInference:
 if __name__ == "__main__":
     try:
         answer_generator = LLMInference()
-        prompt = [{"role": "user", "content": "What is the capital of France?"}]
-        answer = answer_generator.inference(prompt)
+        example_prompt = [{"role": "user", "content": "What is the capital of France?"}]
+        answer = answer_generator.inference(example_prompt)
         print(answer)
-    except Exception as e:
-        logging.error(f"Failed to generate answer: {e}")
+    except Exception as exc:
+        logging.error(f"Failed to generate answer: {exc}")
