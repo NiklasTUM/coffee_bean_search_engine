@@ -40,11 +40,9 @@ class RAGLogger:
             return logger
 
         logger.setLevel(logging.DEBUG)
-        self.logger.info(f"Setting up logger with log file at {self.log_dir}/{self.log_file}.")
 
         # Ensure the log directory exists
         os.makedirs(self.log_dir, exist_ok=True)
-        self.logger.info(f"Log directory {self.log_dir} created/verified.")
 
         # Set up console handler (INFO level)
         console_handler = logging.StreamHandler()
@@ -64,6 +62,7 @@ class RAGLogger:
         logger.addHandler(console_handler)
         logger.addHandler(file_handler)
 
-        self.logger.info("Logger setup completed with console and file handlers.")
+        # Log after the logger is fully set up
+        logger.info(f"Logger setup completed with log file at {self.log_dir}/{self.log_file}.")
 
         return logger

@@ -1,4 +1,6 @@
 import json
+import os
+
 from LLMInference import LLMInference
 from RAGLogger import RAGLogger
 from Retriever import Retriever
@@ -12,7 +14,7 @@ class RAGChain:
     including retrieving relevant documents, generating answers, and updating the index.
 
     Attributes:
-        logger (RAGLogger): Logger instance for logging information and errors.
+        logger (Logger): Logger instance for logging information and errors.
         retriever (Retriever): Instance of the Retriever class for document retrieval.
         answer_generator (LLMInference): Instance of LLMInference for generating answers.
         system_prompt (str): The system prompt loaded from the JSON file.
@@ -24,13 +26,14 @@ class RAGChain:
         Initializes the RAGChain class, setting up the logger, retriever,
         answer generator, system prompt, and index.
         """
-        self.logger = RAGLogger().logger
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = RAGLogger(self.log_dir, "RAG.log").logger
         self.logger.info("Initializing RAGChain...")
 
-        self.retriever = Retriever()
-        self.answer_generator = LLMInference()
-        self.system_prompt = self.load_system_prompt()
         self.index = Index(self.logger)
+        self.retriever = Retriever(self.logger, self.index)
+        self.answer_generator = LLMInference(self.logger)
+        self.system_prompt = self.load_system_prompt()
 
         self.logger.info("RAGChain initialized successfully.")
 
@@ -103,8 +106,10 @@ class RAGChain:
         """
         try:
             self.logger.info(f"Processing question: {question}")
-            retrieved_context = self.retriever.retriever_from_llm.invoke(question)
+            retrieved_context = self.retriever.ensemble_retriever.invoke(question)
             formatted_context = self.format_docs(retrieved_context)
+            self.logger.info(f"Retrieved {len(retrieved_context)} chunks.")
+            self.logger.info(f"Retrieved Context: {formatted_context}")
             prompt = self.create_prompt(formatted_context, question)
             answer = self.answer_generator.inference(prompt)
             self.logger.info(f"Generated answer: {answer}")
@@ -128,7 +133,7 @@ class RAGChain:
 
 if __name__ == '__main__':
     rag_chain = RAGChain()
-    example_question = "What is the capital of France?"
+    example_question = "How does git push work?"
     try:
         rag_chain.chain(example_question)
     except Exception as exc:

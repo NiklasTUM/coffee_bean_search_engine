@@ -1,8 +1,11 @@
+import os
 import time
-import logging
+from logging import Logger
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
+
+from RAGLogger import RAGLogger
 from constants import constants
 
 
@@ -12,20 +15,21 @@ class VectorStore:
     and creation of the vector store using Huggingface embeddings.
 
     Attributes:
+        log_dir (str): The directory where logs will be stored.
+        logger (Logger): Logger instance for logging information and errors.
         pinecone_api_key (str): API key for authenticating with Pinecone.
         pc (Pinecone): Pinecone client instance for interacting with the Pinecone service.
         vector_store (PineconeVectorStore): The vector store instance created using Pinecone.
         embedding_model (HuggingFaceEmbeddings): The embedding model used for embedding the document chunks.
     """
 
-    def __init__(self):
+    def __init__(self, logger: Logger = None):
         """
         Initializes the VectorStore instance, setting up the Pinecone client
         and creating the vector store.
         """
-        self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.INFO)
-
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         self.logger.info("Initializing VectorStore...")
         self.pinecone_api_key = constants.pinecone_api_key
         self.embedding_model = constants.embedding_model

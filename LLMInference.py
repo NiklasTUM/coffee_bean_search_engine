@@ -1,4 +1,5 @@
 import logging
+import os
 from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
@@ -12,6 +13,7 @@ class LLMInference:
     A class to generate answers using a language model via the Hugging Face Inference API.
 
     Attributes:
+        log_dir (str): The directory where logs will be stored.
         logger (Logger): Logger instance for logging information and errors.
         api_key (str): API key for the Hugging Face Inference API.
         api_url (str): The URL of the language model hosted on Hugging Face.
@@ -25,7 +27,8 @@ class LLMInference:
         Args:
             logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
         """
-        self.logger = logger or RAGLogger('logs', 'RAG.log').logger
+        self.log_dir = os.path.join(constants.root_dir, "logs")
+        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         self.api_key = constants.huggingface_api_key
         self.api_url = constants.mistral_7B_instruct_api_url
         self.client = self._initialize_client()
@@ -59,7 +62,7 @@ class LLMInference:
             str: The generated response from the language model.
         """
         try:
-            self.logger.info(f"Starting inference with prompt: {prompt}")
+            self.logger.info(f"Starting inference")
             output = ""
             for message in self.client.chat_completion(
                     messages=prompt,

@@ -1,5 +1,5 @@
 import os
-import logging
+from logging import Logger
 
 from langchain_core.documents import Document
 from constants import constants
@@ -10,7 +10,7 @@ import nltk
 
 
 class DataLoader:
-    def __init__(self, directory: str, logger: logging.Logger = None):
+    def __init__(self, directory: str, logger: Logger = None):
         """
         Initializes the DataLoader with the specified directory and a logger.
 

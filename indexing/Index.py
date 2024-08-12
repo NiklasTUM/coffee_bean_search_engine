@@ -1,4 +1,4 @@
-import logging
+from logging import Logger
 import os
 from langchain.indexes import SQLRecordManager, index
 from langchain_core.documents import Document
@@ -21,32 +21,34 @@ class Index:
         vector_store (PineconeVectorStore): Vector store instance for managing embeddings.
         data_path (str): Path to the data directory.
         data_loader (DataLoader): Instance to load data from the data directory.
-        markdown_splitter (MarkDownSplitter): Instance to split markdown documents into chunks.
+        markdown_splitter (MarkDownSplitter): Instance to split Markdown documents into chunks.
+        chunks (list[Document]): The list of document chunks after splitting/chunking the source documents.
     """
 
-    def __init__(self, logger: RAGLogger = None):
+    def __init__(self, logger: Logger = None):
         """
         Initializes the Index class, setting up the logger, record manager, vector store,
         data loader, and markdown splitter.
 
         Args:
-            logger (RAGLogger, optional): Logger instance for logging.
-                                          If not provided, a default logger is set up.
+
+            logger (Logger, optional): Logger instance for logging. If not provided, a new RAGLogger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
         self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
         self.logger.info("Initializing Index class...")
-
-        self.record_manager = self.initialize_record_manager(self.logger)
-        self.vector_store = VectorStore().create_vectorstore()
         self.data_path = os.path.join(constants.root_dir, "data")
         self.data_loader = DataLoader(self.data_path, self.logger)
         self.markdown_splitter = MarkDownSplitter(self.logger)
 
+        self.record_manager = self.initialize_record_manager(self.logger)
+        self.vector_store = VectorStore().create_vectorstore()
+        self.chunks = self.store_chunks()
+
         self.logger.info("Index class initialized successfully.")
 
     @staticmethod
-    def initialize_record_manager(logger: logging.Logger) -> SQLRecordManager:
+    def initialize_record_manager(logger: Logger) -> SQLRecordManager:
         """
         Initializes the SQLRecordManager with a specified namespace and database URL.
 
@@ -94,12 +96,21 @@ class Index:
             for doc in loaded_documents:
                 chunks.extend(self.markdown_splitter.hybrid_split(doc))
 
+            self.chunks = chunks
             self.add_chunk_to_index(chunks)
             self.logger.info("Document indexing process completed successfully.")
         except Exception as e:
             self.logger.error("An error occurred during the indexing process.")
             self.logger.error(f"Error: {e}")
             raise
+
+    def store_chunks(self):
+        loaded_documents = self.data_loader.load_data()
+        chunks = []
+        for doc in loaded_documents:
+            chunks.extend(self.markdown_splitter.hybrid_split(doc))
+
+        return chunks
 
 
 if __name__ == '__main__':
@@ -112,5 +123,5 @@ if __name__ == '__main__':
     # Perform the indexing
     try:
         my_index.index_documents()
-    except Exception as e:
-        rag_logger.error(f"Error during the document indexing process: {e}")
+    except Exception as exc:
+        rag_logger.error(f"Error during the document indexing process: {exc}")

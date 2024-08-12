@@ -7,3 +7,4 @@ peft
 numpy~=1.26.4
 streamlit~=1.37.1
 langchain-pinecone
+rank_bm25

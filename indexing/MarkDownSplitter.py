@@ -1,4 +1,4 @@
-import logging
+from logging import Logger
 import os
 
 import nltk
@@ -22,7 +22,7 @@ class MarkDownSplitter:
         logger (Logger): Logger instance for logging information and errors.
     """
 
-    def __init__(self, logger: logging.Logger = None):
+    def __init__(self, logger: Logger = None):
         """
         Initializes the MarkDownSplitter with an optional logger.
 
@@ -77,7 +77,6 @@ class MarkDownSplitter:
         Returns:
             list[Document]: A list of Document objects split based on character limits.
         """
-        self.logger.info("Starting character-based splitting of a document chunk.")
         try:
             text_splitter = RecursiveCharacterTextSplitter(
                 chunk_size=1024,
@@ -87,7 +86,6 @@ class MarkDownSplitter:
             )
 
             splitted_docs = text_splitter.create_documents([chunk.page_content], metadatas=[chunk.metadata])
-            self.logger.info(f"Character-based splitting produced {len(splitted_docs)} chunks.")
             return splitted_docs
         except Exception as e:
             self.logger.error(f"Error during character-based splitting: {e}")
