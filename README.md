@@ -51,13 +51,13 @@ The solution is structured around the following core components:
 
    Create a .env file in the root directory with the necessary API keys and configuration. 
    
-   - Please create a hugginface api key here https://huggingface.co/settings/tokens/new? 
-   **set "Make calls to the serverless Inference API"  to true**
+   - Please create a finegrained huggingface api key [here](https://huggingface.co/settings/tokens/new?) . 
+   **Set "Make calls to the serverless Inference API"  to true**
    
-   - To create a pinecone api key, please create first a pinecone account here https://www.pinecone.io/
+   - To create a pinecone api key, please create first a pinecone account [here](https://huggingface.co/settings/tokens/new?)
    (you can use your GitHub account). Then, on the left click on API keys and copy the default api key.
    ````makefile
-   HUGGINGFACE_API_KEY=your_huggingface_api_key #  
+   HUGGINGFACE_API_KEY=your_huggingface_api_key #  https://huggingface.co/settings/tokens/new?
    PINECONE_API_KEY=your_pinecone_api_key # https://www.pinecone.io/ 
    MISTRAL_7B_INSTRUCT_API_URL=mistralai/Mistral-7B-Instruct-v0.3
    EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2
