@@ -67,7 +67,7 @@ The solution is structured around the following core components:
    python -m streamlit run ./src/ui/UserInterface.py
 
 ### Usage
-- **Initialization & Indexing**: Upon start-up, please press the "Update Index" button. This will start the loading of data, chunking of the markdown files, embedding of chunks and storage in the pinecone database. This may take a while for the first time.
+- **Initialization & Indexing**: Upon start-up, please press the "Update Index" button. This will start the loading of data, chunking of the markdown files, embedding of chunks and storage in the pinecone database. This may take a while for the first time. The indexing process can be observed on the pinecone website where the index is displayed.
 - **Querying**: Enter your question in the input field and hit "Get Answer". The system will retrieve relevant context and generate a concise answer.
 - **Updating the Index**: Click on "Update Index" to reload and re-index the documents.
 
