@@ -4,8 +4,8 @@ from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
 
-from RAGLogger import RAGLogger
-from constants import constants
+from src.Logger.RAGLogger import RAGLogger
+from src.constants import constants
 
 
 class LLMInference:

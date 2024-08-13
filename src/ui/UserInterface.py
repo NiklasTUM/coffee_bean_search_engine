@@ -1,8 +1,7 @@
-from RAGChain import RAGChain
 import streamlit as st
+from src.rag_chain.RAGChain import RAGChain
 
 rag_chain = RAGChain()
-
 
 def main():
     st.title("RAG-Based Question Answering")

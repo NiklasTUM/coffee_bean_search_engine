@@ -1,11 +1,11 @@
 import json
 import os
 
-from LLMInference import LLMInference
-from RAGLogger import RAGLogger
-from Retriever import Retriever
-from constants import constants
-from indexing.Index import Index
+from src.inference.LLMInference import LLMInference
+from src.Logger.RAGLogger import RAGLogger
+from src.retrieve.Retriever import Retriever
+from src.constants import constants
+from src.index.Index import Index
 
 
 class RAGChain:
@@ -23,7 +23,7 @@ class RAGChain:
 
     def __init__(self):
         """
-        Initializes the RAGChain class, setting up the logger, retriever,
+        Initializes the RAGChain class, setting up the logger, retrieve,
         answer generator, system prompt, and index.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
@@ -120,7 +120,7 @@ class RAGChain:
 
     def update_index(self):
         """
-        Updates the document index by reloading the data, splitting it into chunks, and indexing those chunks.
+        Updates the document index by reloading the data, splitting it into chunks, and index those chunks.
         """
         try:
             self.logger.info("Updating the document index...")

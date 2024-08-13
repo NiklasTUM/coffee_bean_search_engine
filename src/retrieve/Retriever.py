@@ -5,12 +5,10 @@ import logging
 
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.prompt_values import StringPromptValue
-from langchain_pinecone import PineconeVectorStore
 
-from LLMInference import LLMInference
-from RAGLogger import RAGLogger
-from indexing.Index import Index
-from indexing.VectorStore import VectorStore
+from src.inference.LLMInference import LLMInference
+from src.Logger.RAGLogger import RAGLogger
+from src.index.Index import Index
 
 
 class Retriever:
@@ -18,7 +16,7 @@ class Retriever:
         """
         Initializes the Retriever class with logging and vector store setup.
         """
-        self.logger = logger or RAGLogger('logs', 'RAG.log').logger
+        self.logger = logger or RAGLogger('../../logs', 'RAG.log').logger
         self.logger.info("Initializing Retriever class.")
         logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
 
@@ -32,7 +30,7 @@ class Retriever:
         Initializes a MultiQueryRetriever using a remote LLM via a REST API.
 
         Returns:
-            MultiQueryRetriever: The initialized retriever.
+            MultiQueryRetriever: The initialized retrieve.
         """
         try:
             self.logger.info("Initializing MultiQueryRetriever.")

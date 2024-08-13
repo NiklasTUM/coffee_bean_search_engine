@@ -1,17 +1,19 @@
 from logging import Logger
 import os
+from pathlib import Path
+
 from langchain.indexes import SQLRecordManager, index
 from langchain_core.documents import Document
-from RAGLogger import RAGLogger
-from constants import constants
-from indexing.DataLoader import DataLoader
-from indexing.MarkDownSplitter import MarkDownSplitter
-from indexing.VectorStore import VectorStore
+from src.Logger.RAGLogger import RAGLogger
+from src.constants import constants
+from src.index.DataLoader import DataLoader
+from src.index.MarkDownSplitter import MarkDownSplitter
+from src.index.VectorStore import VectorStore
 
 
 class Index:
     """
-    A class to manage the indexing of documents, including loading data,
+    A class to manage the index of documents, including loading data,
     splitting markdown files into chunks, and adding those chunks to an index.
 
     Attributes:
@@ -56,8 +58,11 @@ class Index:
             SQLRecordManager: The initialized SQLRecordManager instance.
         """
         namespace = "RAGChallenge"
+        db_dir = os.path.join(constants.root_dir, "db", "record_manager_cache.sql")
+        db_path = Path(db_dir).as_posix()
+        db_url = f'sqlite:///{db_path}'
         record_manager = SQLRecordManager(
-            namespace, db_url="sqlite:///record_manager_cache.sql"
+            namespace, db_url=db_url
         )
 
         record_manager.create_schema()
@@ -90,7 +95,7 @@ class Index:
         Loads Markdown documents, splits them into chunks, and indexes those chunks.
         """
         try:
-            self.logger.info("Starting the document indexing process...")
+            self.logger.info("Starting the document index process...")
             loaded_documents = self.data_loader.load_data()
             chunks = []
             for doc in loaded_documents:
@@ -98,9 +103,9 @@ class Index:
 
             self.chunks = chunks
             self.add_chunk_to_index(chunks)
-            self.logger.info("Document indexing process completed successfully.")
+            self.logger.info("Document index process completed successfully.")
         except Exception as e:
-            self.logger.error("An error occurred during the indexing process.")
+            self.logger.error("An error occurred during the index process.")
             self.logger.error(f"Error: {e}")
             raise
 
@@ -120,8 +125,8 @@ if __name__ == '__main__':
     markdown_splitter = MarkDownSplitter(rag_logger)
     my_index = Index(rag_logger)
 
-    # Perform the indexing
+    # Perform the index
     try:
         my_index.index_documents()
     except Exception as exc:
-        rag_logger.error(f"Error during the document indexing process: {exc}")
+        rag_logger.error(f"Error during the document index process: {exc}")

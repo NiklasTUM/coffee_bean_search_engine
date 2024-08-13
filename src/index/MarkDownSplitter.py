@@ -6,10 +6,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
-from RAGLogger import RAGLogger
-from indexing.DataLoader import DataLoader
+from src.Logger.RAGLogger import RAGLogger
+from src.index.DataLoader import DataLoader
 
-from constants import constants
+from src.constants import constants
 
 
 class MarkDownSplitter:

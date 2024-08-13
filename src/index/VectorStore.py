@@ -1,12 +1,12 @@
 import os
 import time
 from logging import Logger
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
 
-from RAGLogger import RAGLogger
-from constants import constants
+from src.Logger.RAGLogger import RAGLogger
+from src.constants import constants
 
 
 class VectorStore:
