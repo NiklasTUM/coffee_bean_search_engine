@@ -1,7 +1,9 @@
 import streamlit as st
 from src.rag_chain.RAGChain import RAGChain
 
-rag_chain = RAGChain()
+# Initialize RAGChain in session state
+if "rag_chain" not in st.session_state:
+    st.session_state.rag_chain = RAGChain()
 
 def main():
     st.title("RAG-Based Question Answering")
@@ -14,7 +16,7 @@ def main():
         if question:
             with st.spinner("Retrieving context and generating answer..."):
                 # Call the chain method to get the answer
-                answer = rag_chain.chain(question)
+                answer = st.session_state.rag_chain.chain(question)
                 st.success("Answer generated!")
                 st.write(answer)
         else:
@@ -24,9 +26,8 @@ def main():
     if st.button("Update Index"):
         with st.spinner("Updating index..."):
             # Call the update_index method to update the index
-            rag_chain.update_index()
+            st.session_state.rag_chain.update_index()
             st.success("Index updated successfully!")
-
 
 if __name__ == "__main__":
     main()

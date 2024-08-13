@@ -3,8 +3,9 @@ huggingface-hub~=0.24.5
 langchain~=0.2.12
 nltk~=3.8.2
 requests~=2.32.3
-peft
+peft==0.12.0
 numpy~=1.26.4
 streamlit~=1.37.1
-langchain-pinecone
-rank_bm25
+langchain-pinecone==0.1.3
+langchain-community==0.2.12
+langchain-huggingface==0.0.3
