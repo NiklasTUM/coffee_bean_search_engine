@@ -2,7 +2,7 @@ import json
 import os
 
 from src.inference.LLMInference import LLMInference
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.retrieve.Retriever import Retriever
 from src.constants import constants
 from src.index.Index import Index
@@ -14,7 +14,7 @@ class RAGChain:
     including retrieving relevant documents, generating answers, and updating the index.
 
     Attributes:
-        logger (Logger): Logger instance for logging information and errors.
+        logger (logger): logger instance for logging information and errors.
         retriever (Retriever): Instance of the Retriever class for document retrieval.
         answer_generator (LLMInference): Instance of LLMInference for generating answers.
         system_prompt (str): The system prompt loaded from the JSON file.

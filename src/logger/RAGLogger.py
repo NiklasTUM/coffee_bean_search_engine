@@ -63,6 +63,6 @@ class RAGLogger:
         logger.addHandler(file_handler)
 
         # Log after the logger is fully set up
-        logger.info(f"Logger setup completed with log file at {self.log_dir}/{self.log_file}.")
+        logger.info(f"logger setup completed with log file at {self.log_dir}/{self.log_file}.")
 
         return logger

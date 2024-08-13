@@ -6,7 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.index.DataLoader import DataLoader
 
 from src.constants import constants
@@ -19,7 +19,7 @@ class MarkDownSplitter:
 
     Attributes:
         log_dir (str): The directory where logs will be stored.
-        logger (Logger): Logger instance for logging information and errors.
+        logger (Logger): logger instance for logging information and errors.
     """
 
     def __init__(self, logger: Logger = None):
@@ -27,7 +27,7 @@ class MarkDownSplitter:
         Initializes the MarkDownSplitter with an optional logger.
 
         Args:
-            logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
+            logger (logger, optional): logger instance for logging. If not provided, a default logger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
         self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger

@@ -3,7 +3,7 @@ from logging import Logger
 
 from langchain_core.documents import Document
 from src.constants import constants
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 
 import nltk
 
@@ -15,7 +15,7 @@ class DataLoader:
 
         Args:
             directory (str): The directory from which to load markdown files.
-            logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
+            logger (logger, optional): logger instance for logging. If not provided, a default logger is set up.
         """
         self.directory = directory
         self.log_dir = os.path.join(constants.root_dir, "logs")

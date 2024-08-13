@@ -4,7 +4,7 @@ from pathlib import Path
 
 from langchain.indexes import SQLRecordManager, index
 from langchain_core.documents import Document
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.constants import constants
 from src.index.DataLoader import DataLoader
 from src.index.MarkDownSplitter import MarkDownSplitter
@@ -18,7 +18,7 @@ class Index:
 
     Attributes:
         log_dir (str): Directory where logs are stored.
-        logger (RAGLogger): Logger instance for logging information and errors.
+        logger (RAGLogger): logger instance for logging information and errors.
         record_manager (SQLRecordManager): Manages the records in the SQL database.
         vector_store (PineconeVectorStore): Vector store instance for managing embeddings.
         data_path (str): Path to the data directory.
@@ -34,7 +34,7 @@ class Index:
 
         Args:
 
-            logger (Logger, optional): Logger instance for logging. If not provided, a new RAGLogger is set up.
+            logger (logger, optional): logger instance for logging. If not provided, a new RAGLogger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
         self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger

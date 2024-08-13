@@ -7,7 +7,7 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_core.prompt_values import StringPromptValue
 
 from src.inference.LLMInference import LLMInference
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.index.Index import Index
 
 

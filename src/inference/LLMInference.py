@@ -4,7 +4,7 @@ from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
 
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.constants import constants
 
 
@@ -14,7 +14,7 @@ class LLMInference:
 
     Attributes:
         log_dir (str): The directory where logs will be stored.
-        logger (Logger): Logger instance for logging information and errors.
+        logger (Logger): logger instance for logging information and errors.
         api_key (str): API key for the Hugging Face Inference API.
         api_url (str): The URL of the language model hosted on Hugging Face.
         client (InferenceClient): The InferenceClient instance to interact with the Hugging Face API.
@@ -25,7 +25,7 @@ class LLMInference:
         Initializes the AnswerGenerator instance with a logger, API key, and URL.
 
         Args:
-            logger (Logger, optional): Logger instance for logging. If not provided, a default logger is set up.
+            logger (logger, optional): logger instance for logging. If not provided, a default logger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
         self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger

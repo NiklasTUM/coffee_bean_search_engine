@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
 
-from src.Logger.RAGLogger import RAGLogger
+from src.logger.RAGLogger import RAGLogger
 from src.constants import constants
 
 
@@ -16,7 +16,7 @@ class VectorStore:
 
     Attributes:
         log_dir (str): The directory where logs will be stored.
-        logger (Logger): Logger instance for logging information and errors.
+        logger (Logger): logger instance for logging information and errors.
         pinecone_api_key (str): API key for authenticating with Pinecone.
         pc (Pinecone): Pinecone client instance for interacting with the Pinecone service.
         vector_store (PineconeVectorStore): The vector store instance created using Pinecone.
