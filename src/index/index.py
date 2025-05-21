@@ -4,11 +4,10 @@ from pathlib import Path
 
 from langchain.indexes import SQLRecordManager, index
 from langchain_core.documents import Document
-from src.logger.RAGLogger import RAGLogger
+from src.logger.CustomLogger import CustomLogger
 from src.constants import constants
-from src.index.DataLoader import DataLoader
-from src.index.MarkDownSplitter import MarkDownSplitter
-from src.index.VectorStore import VectorStore
+from src.index.data_loader import DataLoader
+from src.index.vector_store import VectorStore
 
 
 class Index:
@@ -18,12 +17,10 @@ class Index:
 
     Attributes:
         log_dir (str): Directory where logs are stored.
-        logger (RAGLogger): logger instance for logging information and errors.
+        logger (CustomLogger): logger instance for logging information and errors.
         record_manager (SQLRecordManager): Manages the records in the SQL database.
         vector_store (PineconeVectorStore): Vector store instance for managing embeddings.
-        data_path (str): Path to the data directory.
         data_loader (DataLoader): Instance to load data from the data directory.
-        markdown_splitter (MarkDownSplitter): Instance to split Markdown documents into chunks.
         chunks (list[Document]): The list of document chunks after splitting/chunking the source documents.
     """
 
@@ -37,16 +34,13 @@ class Index:
             logger (logger, optional): logger instance for logging. If not provided, a new RAGLogger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
+        self.logger = logger or CustomLogger(self.log_dir, "logs.log").logger
         self.logger.info("Initializing Index class...")
-        self.data_path = os.path.join(constants.root_dir, "data")
-        self.data_loader = DataLoader(self.data_path, self.logger)
-        self.markdown_splitter = MarkDownSplitter(self.logger)
+        self.data_loader = DataLoader()
 
         self.record_manager = self.initialize_record_manager(self.logger)
         self.vector_store = VectorStore().create_vectorstore()
-        self.chunks = self.store_chunks()
-
+        self.chunks = None
         self.logger.info("Index class initialized successfully.")
 
     @staticmethod
@@ -57,7 +51,7 @@ class Index:
         Returns:
             SQLRecordManager: The initialized SQLRecordManager instance.
         """
-        namespace = "RAGChallenge"
+        namespace = "coffee_beans"
         db_dir = os.path.join(constants.root_dir, "db", "record_manager_cache.sql")
         db_path = Path(db_dir).as_posix()
         db_url = f'sqlite:///{db_path}'
@@ -68,6 +62,15 @@ class Index:
         record_manager.create_schema()
         logger.info(f"SQLRecordManager initialized with namespace: {namespace}")
         return record_manager
+
+    def row_to_document(self, row, idx=None) -> Document:
+        row_clean = row.fillna("")
+
+        page_content = str(row_clean["review"]).strip()
+        metadata = row_clean.drop("review").to_dict()
+        metadata["source"] = f"review_{idx}"
+
+        return Document(page_content=page_content, metadata=metadata)
 
     def add_chunk_to_index(self, chunk_doc: list[Document]):
         """
@@ -92,41 +95,33 @@ class Index:
 
     def index_documents(self):
         """
-        Loads Markdown documents, splits them into chunks, and indexes those chunks.
+        Loads coffee data, converts rows to Documents (embedding only the review),
+        and indexes them using the vector store and record manager.
         """
         try:
-            self.logger.info("Starting the document index process...")
-            loaded_documents = self.data_loader.load_data()
-            chunks = []
-            for doc in loaded_documents:
-                chunks.extend(self.markdown_splitter.hybrid_split(doc))
+            self.logger.info("Starting the coffee review index process...")
+            df = self.data_loader.load_coffee_data()
 
-            self.chunks = chunks
-            self.add_chunk_to_index(chunks)
-            self.logger.info("Document index process completed successfully.")
+            documents = [
+                self.row_to_document(row, idx)
+                for idx, (_, row) in enumerate(df.iterrows())
+            ]
+
+            self.chunks = documents
+            self.add_chunk_to_index(documents)
+
+            self.logger.info("Indexing completed successfully.")
         except Exception as e:
-            self.logger.error("An error occurred during the index process.")
-            self.logger.error(f"Error: {e}")
+            self.logger.error("Error during indexing.")
+            self.logger.error(f"{e}")
             raise
-
-    def store_chunks(self):
-        loaded_documents = self.data_loader.load_data()
-        chunks = []
-        for doc in loaded_documents:
-            chunks.extend(self.markdown_splitter.hybrid_split(doc))
-
-        return chunks
 
 
 if __name__ == '__main__':
-    rag_logger = RAGLogger().logger
-    data_path = os.path.join(constants.root_dir, "data")
-    data_loader = DataLoader(data_path, logger=rag_logger)
-    markdown_splitter = MarkDownSplitter(rag_logger)
-    my_index = Index(rag_logger)
+    my_index = Index()
 
     # Perform the index
     try:
         my_index.index_documents()
     except Exception as exc:
-        rag_logger.error(f"Error during the document index process: {exc}")
+        print(f"Error during the document index process: {exc}")

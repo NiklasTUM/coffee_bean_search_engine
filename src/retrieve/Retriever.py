@@ -7,8 +7,8 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_core.prompt_values import StringPromptValue
 
 from src.inference.LLMInference import LLMInference
-from src.logger.RAGLogger import RAGLogger
-from src.index.Index import Index
+from src.logger.custom_logger import CustomLogger
+from src.index.index import Index
 
 
 class Retriever:
@@ -16,7 +16,7 @@ class Retriever:
         """
         Initializes the Retriever class with logging and vector store setup.
         """
-        self.logger = logger or RAGLogger('../../logs', 'RAG.log').logger
+        self.logger = logger or CustomLogger('../../logs', 'logs.log').logger
         self.logger.info("Initializing Retriever class.")
         logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
 

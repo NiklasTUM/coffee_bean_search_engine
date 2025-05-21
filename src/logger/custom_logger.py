@@ -2,7 +2,7 @@ import logging
 import os
 
 
-class RAGLogger:
+class CustomLogger:
     """
     A class to set up and manage logging for the RAG system, with both console and file handlers.
 
