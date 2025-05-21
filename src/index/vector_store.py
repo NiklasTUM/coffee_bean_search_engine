@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
 
-from src.logger.RAGLogger import RAGLogger
+from src.logger.CustomLogger import CustomLogger
 from src.constants import constants
 
 
@@ -29,7 +29,7 @@ class VectorStore:
         and creating the vector store.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
+        self.logger = logger or CustomLogger(self.log_dir, "logs.log").logger
         self.logger.info("Initializing VectorStore...")
         self.pinecone_api_key = constants.pinecone_api_key
         self.embedding_model = constants.embedding_model
@@ -50,7 +50,7 @@ class VectorStore:
         Returns:
             Index: The Pinecone index object.
         """
-        index_name = "rag-challenge-index"
+        index_name = "coffee-beans-index"
         self.logger.info(f"Initializing index: {index_name}")
 
         try:

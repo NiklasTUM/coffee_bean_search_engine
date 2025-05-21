@@ -2,15 +2,15 @@ import json
 import os
 
 from src.inference.LLMInference import LLMInference
-from src.logger.RAGLogger import RAGLogger
+from src.logger.custom_logger import CustomLogger
 from src.retrieve.Retriever import Retriever
 from src.constants import constants
-from src.index.Index import Index
+from src.index.index import Index
 
 
-class RAGChain:
+class SearchEngineChain:
     """
-    A class to manage the entire RAG (Retrieval-Augmented Generation) process,
+    A class to manage the entire search engine process,
     including retrieving relevant documents, generating answers, and updating the index.
 
     Attributes:
@@ -27,7 +27,7 @@ class RAGChain:
         answer generator, system prompt, and index.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = RAGLogger(self.log_dir, "RAG.log").logger
+        self.logger = CustomLogger(self.log_dir, "RAG.log").logger
         self.logger.info("Initializing RAGChain...")
 
         self.index = Index(self.logger)
@@ -35,7 +35,7 @@ class RAGChain:
         self.answer_generator = LLMInference(self.logger)
         self.system_prompt = self.load_system_prompt()
 
-        self.logger.info("RAGChain initialized successfully.")
+        self.logger.info("Search Engine Chain initialized successfully.")
 
     def load_system_prompt(self) -> str:
         """
@@ -131,10 +131,3 @@ class RAGChain:
             raise
 
 
-if __name__ == '__main__':
-    rag_chain = RAGChain()
-    example_question = "How does git push work?"
-    try:
-        rag_chain.chain(example_question)
-    except Exception as exc:
-        rag_chain.logger.error(f"Error in main execution: {exc}")

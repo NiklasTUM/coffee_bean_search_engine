@@ -4,7 +4,7 @@ from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
 
-from src.logger.RAGLogger import RAGLogger
+from src.logger.custom_logger import CustomLogger
 from src.constants import constants
 
 
@@ -28,7 +28,7 @@ class LLMInference:
             logger (logger, optional): logger instance for logging. If not provided, a default logger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = logger or RAGLogger(self.log_dir, "RAG.log").logger
+        self.logger = logger or CustomLogger(self.log_dir, "RAG.log").logger
         self.api_key = constants.huggingface_api_key
         self.api_url = constants.mistral_7B_instruct_api_url
         self.client = self._initialize_client()
