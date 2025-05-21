@@ -2,11 +2,8 @@ import os
 from logging import Logger
 
 import pandas as pd
-from langchain_core.documents import Document
 from src.constants import constants
-from src.logger.CustomLogger import CustomLogger
-
-import nltk
+from src.logger.custom_logger import CustomLogger
 
 
 class DataLoader:

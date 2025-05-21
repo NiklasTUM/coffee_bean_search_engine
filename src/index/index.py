@@ -4,7 +4,7 @@ from pathlib import Path
 
 from langchain.indexes import SQLRecordManager, index
 from langchain_core.documents import Document
-from src.logger.CustomLogger import CustomLogger
+from src.logger.custom_logger import CustomLogger
 from src.constants import constants
 from src.index.data_loader import DataLoader
 from src.index.vector_store import VectorStore

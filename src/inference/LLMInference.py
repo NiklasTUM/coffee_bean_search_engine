@@ -4,7 +4,7 @@ from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
 
-from src.logger.RAGLogger import CustomLogger
+from src.logger.custom_logger import CustomLogger
 from src.constants import constants
 
 
