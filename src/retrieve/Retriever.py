@@ -63,21 +63,28 @@ class Retriever:
         bm25_retriever = BM25Retriever.from_documents(self.index.chunks)
         return bm25_retriever
 
-    def initialize_ensemble_retriever(self):
-        ensemble_retriever = EnsembleRetriever(retrievers=[
-            self.retriever_from_llm,
-            self.bm25_retriever
-            ],
-            weights=[0.7, 0.3]
+    # def initialize_ensemble_retriever(self):
+    #     ensemble_retriever = EnsembleRetriever(retrievers=[
+    #         self.retriever_from_llm,
+    #         self.bm25_retriever
+    #         ],
+    #         weights=[0.7, 0.3]
+    #     )
+
+    #     return ensemble_retriever
+
+    def initialize_ensemble_retriever(self, vector_weight=0.7, bm25_weight=0.3):
+        ensemble_retriever = EnsembleRetriever(
+            retrievers=[self.retriever_from_llm, self.bm25_retriever],
+            weights=[vector_weight, bm25_weight]
         )
-
         return ensemble_retriever
-
 
 if __name__ == '__main__':
 
     index = Index()
     retriever_instance = Retriever(index=index)
-    retriever = retriever_instance.ensemble_retriever
-    retrieved_passages = retriever.invoke("How does git push work?")
+    # retriever = retriever_instance.ensemble_retriever
+    retriever = retriever_instance.initialize_ensemble_retriever(0.6, 0.4)
+    retrieved_passages = retriever.invoke(full_query)
     print(retrieved_passages)
