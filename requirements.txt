@@ -11,3 +11,7 @@ langchain-community==0.2.12
 langchain-huggingface==0.0.3
 rank-bm25==0.2.2
 kagglehub
+google-genai
+google-generativeai
+google-cloud-translate
+elasticsearch

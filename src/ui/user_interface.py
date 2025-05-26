@@ -1,5 +1,5 @@
 import streamlit as st
-from src.rag_chain.RAGChain import RAGChain
+from src.search_engine.RAGChain import RAGChain
 
 # Initialize RAGChain in session state
 if "rag_chain" not in st.session_state:
