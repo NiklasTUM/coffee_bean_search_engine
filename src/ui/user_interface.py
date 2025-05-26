@@ -6,21 +6,41 @@ if "rag_chain" not in st.session_state:
     st.session_state.rag_chain = RAGChain()
 
 def main():
-    st.title("RAG-Based Question Answering")
+    st.sidebar.title("☕ AromaAtlas")
+    st.sidebar.markdown("Find the perfect coffee, one flavor note at a time.")
 
-    # Input field for the user's question
-    question = st.text_input("Enter your question:")
+    # Sidebar flavor sliders
+    st.sidebar.header("Flavor Profile Filters")
+    sweetness = st.sidebar.slider("Sweetness", 0, 10, 5)
+    bitterness = st.sidebar.slider("Bitterness", 0, 10, 5)
+    acidity = st.sidebar.slider("Acidity", 0, 10, 5)
+    body = st.sidebar.slider("Body (light to full)", 0, 10, 5)
 
-    # Button to submit the question
-    if st.button("Get Answer"):
-        if question:
-            with st.spinner("Retrieving context and generating answer..."):
-                # Call the chain method to get the answer
-                answer = st.session_state.rag_chain.chain(question)
-                st.success("Answer generated!")
-                st.write(answer)
+    st.title("Coffee Bean Search")
+
+    # Input field for search
+    search_query = st.text_input("Describe your ideal coffee:",
+                                 placeholder="e.g., fruity, chocolatey, low-acidity")
+
+
+    # Submit button
+    if st.button("Search Beans"):
+        if search_query.strip():
+            # Combine input + sliders
+            flavor_profile = (
+                f"Sweetness: {sweetness}/10, "
+                f"Bitterness: {bitterness}/10, "
+                f"Acidity: {acidity}/10, "
+                f"Body: {body}/10"
+            )
+            full_query = f"{search_query.strip()}. {flavor_profile}"
+
+            with st.spinner("Searching coffee beans..."):
+                answer = st.session_state.rag_chain.chain(full_query)
+                st.success("Here are your matches:")
+                st.text(answer)
         else:
-            st.warning("Please enter a question before submitting.")
+            st.warning("Please enter some flavor notes to begin searching.")
 
     # Button to update the index
     if st.button("Update Index"):
