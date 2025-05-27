@@ -5,3 +5,4 @@
 RAG-based Knowledge Extraction Challenge_Description.pdf
 /logs/RAG.log
 /db/record_manager_cache.sql
+src/translator/google_service_credentials.json

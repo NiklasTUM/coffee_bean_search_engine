@@ -8,6 +8,7 @@ from src.logger.custom_logger import CustomLogger
 from src.constants import constants
 from src.index.data_loader import DataLoader
 from src.index.vector_store import VectorStore
+from elasticsearch import Elasticsearch, helpers
 
 
 class Index:
@@ -21,26 +22,30 @@ class Index:
         record_manager (SQLRecordManager): Manages the records in the SQL database.
         vector_store (PineconeVectorStore): Vector store instance for managing embeddings.
         data_loader (DataLoader): Instance to load data from the data directory.
-        chunks (list[Document]): The list of document chunks after splitting/chunking the source documents.
     """
 
-    def __init__(self, logger: Logger = None):
+    def __init__(self):
         """
         Initializes the Index class, setting up the logger, record manager, vector store,
-        data loader, and markdown splitter.
+        data loader.
 
-        Args:
 
-            logger (logger, optional): logger instance for logging. If not provided, a new RAGLogger is set up.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = logger or CustomLogger(self.log_dir, "logs.log").logger
+        self.logger = CustomLogger(self.log_dir, "logs.log").logger
         self.logger.info("Initializing Index class...")
         self.data_loader = DataLoader()
 
+        self.elastic_search = Elasticsearch(
+            constants.es_url,
+            api_key=constants.es_api_key
+        )
+        self.es_index_name = constants.es_index_name
+
+        self.create_es_index_if_missing()
+
         self.record_manager = self.initialize_record_manager(self.logger)
         self.vector_store = VectorStore().create_vectorstore()
-        self.chunks = None
         self.logger.info("Index class initialized successfully.")
 
     @staticmethod
@@ -51,8 +56,8 @@ class Index:
         Returns:
             SQLRecordManager: The initialized SQLRecordManager instance.
         """
-        namespace = "coffee_beans"
-        db_dir = os.path.join(constants.root_dir, "db", "record_manager_cache.sql")
+        namespace = "coffee_beans_large"
+        db_dir = os.path.join(constants.root_dir, "db", "record_manager_cache_large.sql")
         db_path = Path(db_dir).as_posix()
         db_url = f'sqlite:///{db_path}'
         record_manager = SQLRecordManager(
@@ -63,29 +68,75 @@ class Index:
         logger.info(f"SQLRecordManager initialized with namespace: {namespace}")
         return record_manager
 
-    # def row_to_document(self, row, idx=None) -> Document:
-    #     row_clean = row.fillna("")
+    def create_es_index_if_missing(self):
+        if not self.elastic_search.indices.exists(index=self.es_index_name):
+            self.logger.info(f"Creating ElasticSearch index: {self.es_index_name}")
 
-    #     page_content = str(row_clean["review"]).strip()
-    #     metadata = row_clean.drop("review").to_dict()
-    #     metadata["source"] = f"review_{idx}"
+            mappings = {
+                "mappings": {
+                    "properties": {
+                        "flavor_description": {"type": "text"},
+                        "desc_2": {"type": "text"},
+                        "desc_3": {"type": "text"},
+                        "name": {"type": "keyword"},
+                        "roaster": {"type": "keyword"},
+                        "roast": {"type": "keyword"},
+                        "loc_country": {"type": "keyword"},
+                        "origin_1": {"type": "keyword"},
+                        "origin_2": {"type": "keyword"},
+                        "100g_USD": {"type": "float"},
+                        "rating": {"type": "float"},
+                        "review_date": {"type": "keyword"},
+                        "source": {"type": "keyword"},
+                    }
+                }
+            }
 
-    #     return Document(page_content=page_content, metadata=metadata)
+            self.elastic_search.indices.create(index=self.es_index_name, body=mappings)
+            self.logger.info(f"Index and mappings created for: {self.es_index_name}")
 
     def row_to_document(self, row, idx=None) -> Document:
         row_clean = row.fillna("")
 
-        page_content = str(row_clean["review"]).strip()
-        metadata = row_clean.drop("review").to_dict()
+        page_content = str(row_clean["desc_1"]).strip()
+        metadata = row_clean.drop("desc_1").to_dict()
         metadata["source"] = f"review_{idx}"
 
-        # Suppose your CSV has these already; otherwise, you’ll need to generate them
-        # e.g. via a small LLM-inference that rates each review 0–10 on each axis:
-        metadata["sweetness_score"]  = float(row_clean.get("sweetness_score", 5))
-        metadata["bitterness_score"] = float(row_clean.get("bitterness_score",5))
-        metadata["acidity_score"]   = float(row_clean.get("acidity_score",5))
         return Document(page_content=page_content, metadata=metadata)
 
+    def add_to_elasticsearch(self, documents: list[Document]):
+        actions = []
+
+        for doc in documents:
+            doc_id = doc.metadata.get("source")
+            if not doc_id:
+                continue
+
+            doc_body = {
+                "flavor_description": doc.page_content,
+                "desc_2": doc.metadata.get("desc_2", ""),
+                "desc_3": doc.metadata.get("desc_3", ""),
+                "name": doc.metadata.get("name", ""),
+                "roaster": doc.metadata.get("roaster", ""),
+                "roast": doc.metadata.get("roast", ""),
+                "loc_country": doc.metadata.get("loc_country", ""),
+                "origin_1": doc.metadata.get("origin_1", ""),
+                "origin_2": doc.metadata.get("origin_2", ""),
+                "100g_USD": doc.metadata.get("100g_USD", 0.0),
+                "rating": doc.metadata.get("rating", 0.0),
+                "review_date": doc.metadata.get("review_date", ""),
+                "source": doc_id,
+            }
+
+            actions.append({
+                "_index": self.es_index_name,
+                "_id": doc_id,
+                "_source": doc_body,
+            })
+
+        if actions:
+            helpers.bulk(self.elastic_search, actions)
+            self.logger.info(f"Indexed {len(actions)} structured docs into Elastic Cloud.")
 
     def add_chunk_to_index(self, chunk_doc: list[Document]):
         """
@@ -122,8 +173,8 @@ class Index:
                 for idx, (_, row) in enumerate(df.iterrows())
             ]
 
-            self.chunks = documents
             self.add_chunk_to_index(documents)
+            self.add_to_elasticsearch(documents)  # NEW
 
             self.logger.info("Indexing completed successfully.")
         except Exception as e:

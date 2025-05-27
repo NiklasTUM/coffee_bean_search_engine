@@ -23,16 +23,17 @@ class VectorStore:
         embedding_model (HuggingFaceEmbeddings): The embedding model used for embedding the document chunks.
     """
 
-    def __init__(self, logger: Logger = None):
+    def __init__(self):
         """
         Initializes the VectorStore instance, setting up the Pinecone client
         and creating the vector store.
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
-        self.logger = logger or CustomLogger(self.log_dir, "logs.log").logger
+        self.logger = CustomLogger(self.log_dir, "logs.log").logger
         self.logger.info("Initializing VectorStore...")
         self.pinecone_api_key = constants.pinecone_api_key
         self.embedding_model = constants.embedding_model
+        self.embedding_model_ml = constants.embedding_model_ml
 
         try:
             self.pc = Pinecone(api_key=self.pinecone_api_key)
@@ -50,7 +51,7 @@ class VectorStore:
         Returns:
             Index: The Pinecone index object.
         """
-        index_name = "coffee-beans-index"
+        index_name = "coffee-beans-large-index"
         self.logger.info(f"Initializing index: {index_name}")
 
         try:
@@ -88,7 +89,7 @@ class VectorStore:
         self.logger.info("Creating vector store with Hugging Face embeddings...")
 
         try:
-            embeddings = HuggingFaceEmbeddings(model_name=self.embedding_model)
+            embeddings = HuggingFaceEmbeddings(model_name=self.embedding_model_ml)
             vs_index_name = self._initialize_index()
             vector_store = PineconeVectorStore(index=vs_index_name, embedding=embeddings)
             self.logger.info("Vector store created successfully.")

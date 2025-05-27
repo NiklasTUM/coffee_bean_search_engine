@@ -12,9 +12,9 @@ class CustomLogger:
         logger (logging.Logger): Configured logger instance for logging information and errors.
     """
 
-    def __init__(self, log_dir: str = 'logs', log_file: str = 'RAG.log'):
+    def __init__(self, log_dir: str = 'logs', log_file: str = 'logs.log'):
         """
-        Initializes the RAGLogger instance and sets up the logger.
+        Initializes the CustomLogger instance and sets up the logger.
 
         Args:
             log_dir (str): Directory where the log file will be stored.
@@ -23,7 +23,7 @@ class CustomLogger:
         self.log_dir = log_dir
         self.log_file = log_file
         self.logger = self._setup_logger()
-        self.logger.info("RAGLogger initialized successfully.")
+        self.logger.info("Custom Logger initialized successfully.")
 
     def _setup_logger(self) -> logging.Logger:
         """
@@ -35,7 +35,6 @@ class CustomLogger:
         """
         logger = logging.getLogger(__name__)
 
-        # Check if the logger already has handlers (to prevent adding them multiple times)
         if logger.hasHandlers():
             return logger
 
