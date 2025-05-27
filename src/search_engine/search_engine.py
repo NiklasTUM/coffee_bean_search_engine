@@ -121,7 +121,7 @@ if __name__ == "__main__":
     search_engine = SearchEngine()
     query = "fruit"
     filters = {
-        #"roast": "Medium_Light",
+        "roast": "Dark",
     }
 
     results = search_engine.search(query, filters)
