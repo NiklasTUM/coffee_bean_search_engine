@@ -2832,3 +2832,1062 @@ contents.str
 2025-05-27 14:18:31,192 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
 2025-05-27 14:18:31,192 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
 2025-05-27 14:18:31,192 - src.logger.custom_logger - INFO - Processing query: fruit
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - logger setup completed with log file at C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\logs/logs.log.
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 15:58:06,280 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:08,464 - src.logger.custom_logger - INFO - SQLRecordManager initialized with namespace: coffee_beans_large
+2025-05-27 15:58:08,464 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:08,464 - src.logger.custom_logger - INFO - Initializing VectorStore...
+2025-05-27 15:58:08,560 - src.logger.custom_logger - INFO - Pinecone client initialized successfully.
+2025-05-27 15:58:08,607 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 15:58:25,850 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 15:58:27,784 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 15:58:27,784 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 15:58:27,784 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 15:58:32,281 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 15:58:32,694 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 15:58:32,694 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 15:58:32,694 - src.logger.custom_logger - INFO - Index class initialized successfully.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Initializing Retriever class.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Loading system prompt text from C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\prompt_templates\system_prompt.yaml...
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - System prompt text loaded successfully.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - PromptBuilder initialized successfully with system prompt.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
+2025-05-27 15:58:32,709 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - logger setup completed with log file at C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\logs/logs.log.
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 16:00:03,732 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:05,396 - src.logger.custom_logger - INFO - SQLRecordManager initialized with namespace: coffee_beans_large
+2025-05-27 16:00:05,396 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:05,396 - src.logger.custom_logger - INFO - Initializing VectorStore...
+2025-05-27 16:00:05,437 - src.logger.custom_logger - INFO - Pinecone client initialized successfully.
+2025-05-27 16:00:05,437 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:00:22,888 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:00:26,779 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:00:26,779 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:00:26,779 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:00:32,294 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Index class initialized successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Initializing Retriever class.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Loading system prompt text from C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\prompt_templates\system_prompt.yaml...
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - System prompt text loaded successfully.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - PromptBuilder initialized successfully with system prompt.
+2025-05-27 16:00:32,721 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:00:32,736 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
+2025-05-27 16:00:32,736 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
+2025-05-27 16:01:32,487 - src.logger.custom_logger - INFO - logger setup completed with log file at C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\logs/logs.log.
+2025-05-27 16:01:32,490 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:01:32,490 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 16:01:32,490 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:01:32,490 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 16:01:32,490 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:01:34,070 - src.logger.custom_logger - INFO - SQLRecordManager initialized with namespace: coffee_beans_large
+2025-05-27 16:01:34,070 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:01:34,070 - src.logger.custom_logger - INFO - Initializing VectorStore...
+2025-05-27 16:01:34,099 - src.logger.custom_logger - INFO - Pinecone client initialized successfully.
+2025-05-27 16:01:34,099 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:01:48,140 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:01:49,832 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:01:49,832 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:01:49,832 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:01:54,560 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:01:54,942 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:01:54,942 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:01:54,942 - src.logger.custom_logger - INFO - Index class initialized successfully.
+2025-05-27 16:01:54,942 - src.logger.custom_logger - INFO - Starting the coffee review index process...
+2025-05-27 16:01:55,432 - src.logger.custom_logger - INFO - Adding document chunks to the index...
+2025-05-27 16:01:56,276 - src.logger.custom_logger - INFO - Document chunks added to the index successfully.
+2025-05-27 16:02:04,779 - src.logger.custom_logger - INFO - Indexed 2095 structured docs into Elastic Cloud.
+2025-05-27 16:02:04,779 - src.logger.custom_logger - INFO - Indexing completed successfully.
+2025-05-27 16:02:04,787 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:02:04,787 - src.logger.custom_logger - INFO - Initializing Retriever class.
+2025-05-27 16:02:04,787 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:02:04,787 - src.logger.custom_logger - INFO - Loading system prompt text from C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\prompt_templates\system_prompt.yaml...
+2025-05-27 16:02:04,793 - src.logger.custom_logger - INFO - System prompt text loaded successfully.
+2025-05-27 16:02:04,793 - src.logger.custom_logger - INFO - PromptBuilder initialized successfully with system prompt.
+2025-05-27 16:02:04,793 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:02:04,793 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
+2025-05-27 16:02:04,793 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
+2025-05-27 16:04:26,831 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:05:05,577 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:05:45,381 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:05:53,449 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - logger setup completed with log file at C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\logs/logs.log.
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 16:06:18,922 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:06:20,523 - src.logger.custom_logger - INFO - SQLRecordManager initialized with namespace: coffee_beans_large
+2025-05-27 16:06:20,523 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:06:20,523 - src.logger.custom_logger - INFO - Initializing VectorStore...
+2025-05-27 16:06:20,565 - src.logger.custom_logger - INFO - Pinecone client initialized successfully.
+2025-05-27 16:06:20,566 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:06:33,936 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:06:38,006 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:06:38,007 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:06:38,007 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:06:41,913 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:06:42,293 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:06:42,293 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:06:42,294 - src.logger.custom_logger - INFO - Index class initialized successfully.
+2025-05-27 16:06:42,294 - src.logger.custom_logger - INFO - Starting the coffee review index process...
+2025-05-27 16:06:42,802 - src.logger.custom_logger - INFO - Adding document chunks to the index...
+2025-05-27 16:06:43,797 - src.logger.custom_logger - INFO - Document chunks added to the index successfully.
+2025-05-27 16:07:02,186 - src.logger.custom_logger - INFO - Indexed 2095 structured docs into Elastic Cloud.
+2025-05-27 16:07:02,187 - src.logger.custom_logger - INFO - Indexing completed successfully.
+2025-05-27 16:07:02,187 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:07:02,187 - src.logger.custom_logger - INFO - Initializing Retriever class.
+2025-05-27 16:07:02,189 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:07:02,190 - src.logger.custom_logger - INFO - Loading system prompt text from C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\prompt_templates\system_prompt.yaml...
+2025-05-27 16:07:02,195 - src.logger.custom_logger - INFO - System prompt text loaded successfully.
+2025-05-27 16:07:02,195 - src.logger.custom_logger - INFO - PromptBuilder initialized successfully with system prompt.
+2025-05-27 16:07:02,196 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:07:02,197 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
+2025-05-27 16:07:02,197 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
+2025-05-27 16:07:02,197 - src.logger.custom_logger - INFO - Processing query: fruit
+2025-05-27 16:07:31,376 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:07:36,271 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:36,271 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure w...
+2025-05-27 16:07:38,226 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:38,226 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because it features a pronounced chocolaty flavor, with notes of baking chocolate in both the aroma and cup. This directly matches your request for "chocolate" notes in a coffee.
+
+2025-05-27 16:07:38,226 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:38,226 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. Sw...
+2025-05-27 16:07:39,118 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:39,118 - src.logger.custom_logger - INFO - Generated explanation: > This coffee matches your interest in chocolate because its flavor description includes notes of baking chocolate. The finish also consolidates around suggestions of cedar-toned chocolate, providing a rich, chocolaty experience.
+
+2025-05-27 16:07:39,127 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:39,127 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hin...
+2025-05-27 16:07:40,058 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:40,058 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile features baker's chocolate, aligning with your search for "chocolate." The description also notes chocolate notes moving forward in the finish, suggesting a prominent and lasting chocolate impression.
+
+2025-05-27 16:07:40,065 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:40,065 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-to...
+2025-05-27 16:07:40,979 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:40,979 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo is recommended because it features a deep, chocolaty profile. You'll specifically notice notes of baking chocolate in both the aroma and the cup, aligning with your search for "chocolate." The crisp, chocolaty finish further enhances this flavor.
+
+2025-05-27 16:07:40,988 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:40,988 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet struc...
+2025-05-27 16:07:41,771 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:41,771 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is distinctly "chocolaty," featuring notes of baking chocolate in both its aroma and taste. This aligns directly with your search for "chocolate."
+
+2025-05-27 16:07:41,787 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:41,787 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar ...
+2025-05-27 16:07:42,820 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:42,820 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features a crisply chocolaty profile, with notes of baking chocolate that strongly align with your search for "chocolate". The description notes that chocolate richly dominates, especially in milk.
+
+2025-05-27 16:07:42,820 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:42,820 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune i...
+2025-05-27 16:07:43,642 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:43,642 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features prominent dark chocolate notes, a creamy mouthfeel, and a slightly smoky finish. These elements strongly align with your search for "chocolate" flavors.
+
+2025-05-27 16:07:43,642 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:43,642 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in a...
+2025-05-27 16:07:44,464 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:44,466 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features prominent chocolate notes, specifically chocolate fudge, which aligns with your search for "chocolate". The flavor description also notes a chocolaty, fruit-forward finish, further emphasizing the chocolate character.
+
+2025-05-27 16:07:44,468 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:44,468 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in ...
+2025-05-27 16:07:45,356 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:45,356 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is described as chocolaty, with notes of dark chocolate. The review highlights its bittersweet and richly pungent character, especially when prepared as espresso, aligning well with your search for "chocolate."
+
+2025-05-27 16:07:45,357 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:07:45,357 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cut...
+2025-05-27 16:07:46,159 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:07:46,159 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features prominent chocolaty notes, including baking chocolate, which aligns with your search for "chocolate." The smooth mouthfeel and chocolaty finish further enhance the chocolate experience.
+
+2025-05-27 16:09:11,712 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:09:17,109 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:17,109 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure w...
+2025-05-27 16:09:17,986 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:17,987 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended due to its pronounced chocolate notes. The flavor description highlights "baking chocolate" in both the aroma and cup, aligning with your search for "chocolate." The chocolaty finish further reinforces this characteristic.
+
+2025-05-27 16:09:17,987 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:17,987 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. Sw...
+2025-05-27 16:09:18,881 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:18,881 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended due to its distinct chocolaty notes, featuring baking chocolate in both aroma and cup. The finish further emphasizes cedar-toned chocolate, aligning well with your search for "chocolate."
+
+2025-05-27 16:09:18,885 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:18,885 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hin...
+2025-05-27 16:09:19,701 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:19,704 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile features baker’s chocolate notes, aligning directly with your search for "chocolate." The description also highlights how chocolate flavors develop further in the finish.
+
+2025-05-27 16:09:19,708 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:19,709 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-to...
+2025-05-27 16:09:20,559 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:20,559 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo Natural Water Decaf is recommended because it features a pronounced chocolaty profile, including notes of baking chocolate. The crisp, chocolaty finish further complements your preference for chocolate flavors.
+
+2025-05-27 16:09:20,568 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:20,569 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet struc...
+2025-05-27 16:09:21,542 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:21,542 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is distinctly "chocolaty," featuring notes of baking chocolate in both its aroma and taste. The gently drying finish also highlights a "chocolatey cashew" character, aligning well with your search for chocolate notes.
+
+2025-05-27 16:09:21,552 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:21,555 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar ...
+2025-05-27 16:09:22,462 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:22,462 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features a crisply chocolaty profile. You'll likely appreciate the notes of baking chocolate, which are prominent in both the aroma and taste. The description also notes that chocolate richly dominates in milk, making it a versatile choice.
+
+2025-05-27 16:09:22,470 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:22,470 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune i...
+2025-05-27 16:09:23,618 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:23,618 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features a distinct chocolaty profile. You'll find notes of dark chocolate in both the aroma and the cup, complemented by a viscous, creamy mouthfeel and a slightly smoky finish. When mixed with milk, the chocolate notes are enhanced by floral undertones.
+
+2025-05-27 16:09:23,623 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:23,623 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in a...
+2025-05-27 16:09:24,406 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:24,406 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features prominent chocolate notes, specifically chocolate fudge. The flavor profile also offers a creamy mouthfeel and a chocolaty finish, aligning well with your preference for "chocolate."
+
+2025-05-27 16:09:24,422 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:24,422 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in ...
+2025-05-27 16:09:25,257 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:25,257 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a pronounced chocolate flavor, described as "chocolaty" and "dark chocolate," which strongly matches your search for "chocolate." The flavor profile is further enhanced by a bittersweet pungency that complements the chocolate notes.
+
+2025-05-27 16:09:25,257 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:25,257 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cut...
+2025-05-27 16:09:26,252 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:26,252 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features prominent chocolate notes. The flavor description highlights "chocolaty" and "baking chocolate," aligning with your search for chocolate flavors. You can expect a gently bittersweet profile with a smooth mouthfeel.
+
+2025-05-27 16:09:52,993 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:09:56,369 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:56,369 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure w...
+2025-05-27 16:09:57,080 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:57,082 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because it features a distinct chocolaty flavor, along with notes of baking chocolate, which aligns directly with your search for "chocolate."
+
+2025-05-27 16:09:57,089 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:57,097 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. Sw...
+2025-05-27 16:09:57,994 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:57,994 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is notably chocolaty, featuring baking chocolate notes in both aroma and cup. The finish further emphasizes a cedar-toned chocolate, aligning well with your search for "chocolate."
+
+2025-05-27 16:09:58,010 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:58,010 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hin...
+2025-05-27 16:09:58,807 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:58,823 - src.logger.custom_logger - INFO - Generated explanation: This Kenya Thiriku AA is recommended because its flavor profile features baker's chocolate notes, aligning with your search for "chocolate." The description also highlights a resonant, long finish where chocolate flavors come forward, ensuring a satisfying chocolate experience.
+
+2025-05-27 16:09:58,823 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:58,823 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-to...
+2025-05-27 16:09:59,696 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:09:59,696 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo is recommended because it features a deep, chocolaty profile with notes of baking chocolate, which directly aligns with your search for "chocolate." The crisp, chocolaty finish further enhances this sought-after characteristic.
+
+2025-05-27 16:09:59,696 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:09:59,696 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet struc...
+2025-05-27 16:10:00,556 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:00,556 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a distinct chocolaty profile, including notes of baking chocolate, which aligns with your search for "chocolate." The gently drying finish also has a chocolatey cashew character.
+
+2025-05-27 16:10:00,562 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:00,562 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar ...
+2025-05-27 16:10:01,427 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:01,427 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features a pronounced chocolaty profile, as highlighted by notes of baking chocolate. The description specifically mentions "crisply chocolaty" and that "chocolate richly dominates," which directly aligns with your search for "chocolate."
+
+2025-05-27 16:10:01,427 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:01,427 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune i...
+2025-05-27 16:10:02,337 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:02,337 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a distinct chocolaty profile, including notes of dark chocolate, which aligns with your search for "chocolate." The viscous, creamy mouthfeel and slightly smoky finish complement the chocolate notes, enhancing the overall experience.
+
+2025-05-27 16:10:02,351 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:02,353 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in a...
+2025-05-27 16:10:03,321 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:03,321 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features prominent chocolate notes, specifically chocolate fudge, aligning well with your search for "chocolate." The flavor description highlights a chocolaty and fruit-forward finish, enhanced by a creamy mouthfeel.
+
+2025-05-27 16:10:03,337 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:03,343 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in ...
+2025-05-27 16:10:04,290 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:04,290 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is described as chocolaty, particularly with notes of dark chocolate, which aligns directly with your search for "chocolate." The description highlights its bittersweet, richly pungent, chocolaty character, especially when prepared as espresso.
+
+2025-05-27 16:10:04,369 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:04,369 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cut...
+2025-05-27 16:10:05,340 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:05,340 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a pronounced chocolaty profile, including notes of baking chocolate, which aligns perfectly with your search for "chocolate." The flavor profile is further enhanced by a smooth mouthfeel.
+
+2025-05-27 16:10:31,461 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:10:34,957 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:34,958 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure w...
+2025-05-27 16:10:35,673 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:35,673 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because its flavor profile features prominent chocolate notes, specifically baking chocolate, aligning directly with your search for "chocolate." The chocolaty finish further enhances this flavor.
+
+2025-05-27 16:10:35,685 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:35,685 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. Sw...
+2025-05-27 16:10:36,500 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:36,506 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is distinctly chocolaty, featuring notes of baking chocolate. The finish further emphasizes this with suggestions of cedar-toned chocolate, aligning well with your search for "chocolate".
+
+2025-05-27 16:10:36,509 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:36,509 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-to...
+2025-05-27 16:10:37,423 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:37,423 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo is recommended for its deep, chocolaty flavor profile. You'll find notes of baking chocolate in both the aroma and the cup, complemented by a crisp, chocolaty finish.
+
+2025-05-27 16:10:37,436 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:37,436 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar ...
+2025-05-27 16:10:38,248 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:38,248 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features a distinct chocolate flavor. You'll find notes of baking chocolate that richly dominate, especially when enjoyed with milk.
+
+2025-05-27 16:10:38,251 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:10:38,256 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cut...
+2025-05-27 16:10:39,081 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:10:39,081 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it exhibits prominent chocolate notes, described as "chocolaty" and "baking chocolate," which directly match your search for "chocolate." The flavor profile also includes a gently bittersweet quality that complements the chocolate character.
+
+2025-05-27 16:10:53,699 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:11:05,534 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:11:10,952 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:11:15,225 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:12:58,074 - src.logger.custom_logger - INFO - Processing query: medium sweetness, medium bitterness, medium acidity
+2025-05-27 16:13:24,465 - src.logger.custom_logger - INFO - Processing query: medium sweetness, medium bitterness, medium acidity
+2025-05-27 16:13:27,841 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:27,844 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Balanced, sweet-toned. Baking chocolate, almond, date, molasses,\n  magnolia...
+2025-05-27 16:13:28,858 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:28,858 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a balanced and sweet-toned profile with notes of baking chocolate, almond, date, and molasses. It exhibits a bittersweet structure with little perceptible acidity and a satiny-smooth mouthfeel, aligning with your request for medium sweetness, medium bitterness, and medium acidity.
+
+2025-05-27 16:13:28,867 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:28,869 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Elegant, complexly sweet, umami-toned. Narcissus, ripe tomato,\n  date, almo...
+2025-05-27 16:13:29,681 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:29,682 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended for its complexly sweet profile and bright, juicy acidity, aligning with your preference for medium sweetness and acidity. The flavor description also notes cocoa powder, which contributes a medium level of bitterness, creating a balanced cup.
+
+2025-05-27 16:13:29,682 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:29,682 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Sweetly spice-toned. Baking spices, rhododendron, dark chocolate,\n  hazelnu...
+2025-05-27 16:13:30,589 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:30,589 - src.logger.custom_logger - INFO - Generated explanation: This Peru Chacra Don Dago is recommended for its balanced profile, featuring medium sweetness and gentle acidity as described in your query. The dark chocolate and hazelnut notes also contribute to a medium level of bitterness, creating a well-rounded cup.
+
+2025-05-27 16:13:30,604 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:30,604 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Spice-toned, richly sweet. Baking spices, caramel, red apple,\n  magnolia, o...
+2025-05-27 16:13:31,516 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:31,520 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a richly sweet profile alongside brisk acidity, aligning with your request for medium sweetness and medium acidity. The flavor description also notes baking spices and caramel, which contribute to the overall balance, potentially offering a medium level of bitterness as well.
+
+2025-05-27 16:13:31,520 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:31,520 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Sweet-toned, fruit-centered. Raisin, brown sugar, lemon zest,\n  prairie flo...
+2025-05-27 16:13:32,438 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:32,438 - src.logger.custom_logger - INFO - Generated explanation: This coffee offers a sweet structure and brisk acidity, aligning with your preference for medium sweetness and medium acidity. The flavor description also mentions notes of brown sugar and lemon zest, contributing to a balanced profile.
+
+2025-05-27 16:13:32,448 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:32,450 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Rich, resonant, high-toned. Lychee, lilac, chocolate fudge, frankinense,\n  ...
+2025-05-27 16:13:33,465 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:33,465 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your request for medium sweetness and acidity with its "sweet-tart structure" and "deep sweetness." While it doesn't explicitly mention bitterness, its rich and resonant profile, along with bright acidity, suggests a balanced cup.
+
+2025-05-27 16:13:33,471 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:33,471 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Intoxicatingly (though cleanly) fruit-toned. Raspberry coulis,\n  halvah, pl...
+2025-05-27 16:13:34,481 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:34,481 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended due to its richly sweet-tart structure and bright, high-toned acidity, which should offer the medium levels of sweetness and acidity you're seeking. While the description doesn't explicitly mention bitterness, the overall balance of fruit and citrus notes suggests a balanced cup.
+
+2025-05-27 16:13:34,497 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:34,498 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Deeply rich, sweet, complex. Cocoa nib, ripe persimmon, tangerine\n  zest, g...
+2025-05-27 16:13:35,510 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:35,514 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo G4 Natural Espresso is recommended because it features a deeply rich and sweet profile, aligning with your preference for medium sweetness. While the description doesn't explicitly mention "bitterness" or "acidity," the "crisp, cocoa-toned finish" suggests a balanced profile with a pleasant level of both.
+
+2025-05-27 16:13:35,517 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:35,517 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Sweet-toned, chocolaty and floral. Dark\n  chocolate,...
+2025-05-27 16:13:36,537 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:36,538 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend offers a sweet-toned profile with notes of dark chocolate and caramel, aligning with your preference for medium sweetness. While the review doesn't explicitly mention bitterness or acidity, the chocolaty character and smooth mouthfeel suggest a balanced profile that would likely deliver medium levels of both.
+
+2025-05-27 16:13:36,543 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:36,557 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: medium sweetness, medium bitterness, medium acidity', 'Relevant Coffee Information:\n---\nflavor_description: Pungent and earthy with a quietly persuasive sweetness. Fresh\n  clay, grape...
+2025-05-27 16:13:37,557 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:37,563 - src.logger.custom_logger - INFO - Generated explanation: This Sumatra Tano Batak coffee matches your request for medium sweetness, bitterness, and acidity because it features a "quietly persuasive sweetness" alongside notes of baker's chocolate (a source of pleasant bitterness) and grapefruit zest, which contributes to a balanced acidity. The "sweet/savory" structure further indicates a well-rounded profile.
+
+2025-05-27 16:13:54,278 - src.logger.custom_logger - INFO - Processing query: low sweetness, medium bitterness, high acidity
+2025-05-27 16:13:57,626 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:57,626 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Balanced, sweet-toned. Baking chocolate, almond, date, molasses,\n  magnolia in a...
+2025-05-27 16:13:58,689 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:58,689 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it exhibits a bittersweet structure with only a little perceptible acidity, aligning with your preference for low sweetness and high bitterness. The flavor notes of baking chocolate and almond contribute to the bitterness, while the "little perceptible acidity" indicates a subdued tartness.
+
+2025-05-27 16:13:58,698 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:58,699 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Sweetly spice-toned. Baking spices, rhododendron, dark chocolate,\n  hazelnut, mo...
+2025-05-27 16:13:59,622 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:13:59,622 - src.logger.custom_logger - INFO - Generated explanation: This coffee features gentle acidity, aligning with your preference for high acidity. While it's described as sweet-toned, the dark chocolate and baking spice notes may contribute to the medium bitterness you're seeking.
+
+2025-05-27 16:13:59,631 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:13:59,631 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet-toned. Caramel, fig, oak, narcissus-like flowers,\n  almond in arom...
+2025-05-27 16:14:00,642 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:00,644 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended for its brisk acidity, aligning with your preference for high acidity. While described as "crisply sweet-toned," the overall balance and presence of oak and almond contribute to a profile that isn't dominated by sweetness, potentially satisfying your preference for low sweetness. Note that the description does not include information about bitterness.
+
+2025-05-27 16:14:00,651 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:00,651 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Spice-toned, richly sweet. Baking spices, caramel, red apple,\n  magnolia, oak in...
+2025-05-27 16:14:01,632 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:01,636 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features brisk acidity, as you requested. While described as richly sweet, the spice-toned profile with baking spices, red apple, and oak may provide a counterpoint that balances the sweetness, potentially aligning with your preference for low sweetness and medium bitterness.
+
+2025-05-27 16:14:01,636 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:01,644 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', "Relevant Coffee Information:\n---\nflavor_description: High-toned sweetness, crisply tart, pleasantly salty-edged. Dried\n  apricot, tam...
+2025-05-27 16:14:02,615 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:02,616 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your preference for low sweetness and high acidity, featuring a "gently low-toned" sweetness balanced by a "briskly juicy acidity." You'll also find a medium bitterness in the form of "salted chocolate" and "salted cocoa" notes.
+
+2025-05-27 16:14:02,621 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:02,621 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Crisp, sweet, delicately cocoa-toned. Blood orange, cocoa, macadamia\n  nut, hone...
+2025-05-27 16:14:03,674 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:03,675 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a "low-toned but vibrant acidity" and a "rather bittersweet" structure, aligning with your request for high acidity and medium bitterness. While it has some sweetness, it's described as "delicately cocoa-toned" and the finish "dries out a bit," suggesting a lower level of overall sweetness, as you prefer.
+
+2025-05-27 16:14:03,677 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:03,677 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Big, round, deeply resonant, layered. Fresh-cut cedar, baker’s\n  chocolate, autu...
+2025-05-27 16:14:04,765 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:04,775 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a sweet-savory profile with low-toned structure, aligning with your preference for "low sweetness." While the description notes a "powerful, chocolate-complicated sweetness" in the finish, the overall structure is less sweet. The baker's chocolate note contributes to a medium bitterness, and the "fresh-cut cedar" and "autumn squash" notes add complexity without increasing sweetness.
+
+2025-05-27 16:14:04,782 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:04,783 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Sweet-toned, fruit-centered. Raisin, brown sugar, lemon zest,\n  prairie flowers,...
+2025-05-27 16:14:05,680 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:05,681 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features brisk acidity and a medium-bodied, velvety-smooth mouthfeel. While it presents some sweetness through notes like raisin and brown sugar, the lemon zest and oak contribute complexity that balances the profile, aligning with your preference for low sweetness.
+
+2025-05-27 16:14:05,683 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:05,683 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Rich, resonant, high-toned. Lychee, lilac, chocolate fudge, frankinense,\n  tamar...
+2025-05-27 16:14:06,432 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:06,432 - src.logger.custom_logger - INFO - Generated explanation: This coffee features a sweet-tart structure with juicy, bright acidity, aligning with your preference for high acidity and low sweetness. While the finish has a deep sweetness, the initial impression is more balanced.
+
+2025-05-27 16:14:06,449 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:14:06,449 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: low sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Intoxicatingly (though cleanly) fruit-toned. Raspberry coulis,\n  halvah, plumeri...
+2025-05-27 16:14:07,594 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:14:07,596 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features bright, high-toned acidity, aligning with your preference. While described as richly sweet-tart, the finish intensifies its herby citrus notes, which tempers the sweetness. Although medium bitterness isn't explicitly mentioned, the complex profile and high acidity could contribute to a balanced, less sweet overall impression.
+
+2025-05-27 16:16:17,576 - src.logger.custom_logger - INFO - Processing query: high sweetness, medium bitterness, high acidity
+2025-05-27 16:16:23,569 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:23,569 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet-toned. Caramel, fig, oak, narcissus-like flowers,\n  almond in aro...
+2025-05-27 16:16:24,580 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:24,580 - src.logger.custom_logger - INFO - Generated explanation: This Burundi Gahahe coffee matches your request because it features a crisply sweet profile with a balanced, sweet structure and brisk acidity. The flavor notes of caramel and fig contribute to the sweetness, while the balanced structure suggests a medium level of bitterness, aligning with your preference.
+
+2025-05-27 16:16:24,593 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:24,594 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Spice-toned, richly sweet. Baking spices, caramel, red apple,\n  magnolia, oak i...
+2025-05-27 16:16:25,549 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:25,549 - src.logger.custom_logger - INFO - Generated explanation: This Burundi Kibingo coffee matches your request with its richly sweet profile, brisk acidity, and notes of caramel and red apple. While bitterness isn't explicitly mentioned, the sweet structure and spice notes complement the overall flavor, creating a balanced cup.
+
+2025-05-27 16:16:25,561 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:25,563 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Deeply sweet-savory, uniquely pungent. Ripe tomato, pink peppercorn,\n  lantana-...
+2025-05-27 16:16:26,733 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:26,733 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a "richly sweet" structure that aligns with your request for high sweetness. Additionally, the presence of "blood orange zest" indicates the high acidity you're seeking. While the description doesn't explicitly state "medium bitterness," the "sweet-savory" balance, combined with notes like "pipe tobacco," suggests a nuanced profile where bitterness is present but well-integrated.
+
+2025-05-27 16:16:26,741 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:26,744 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Balanced, sweet-toned. Baking chocolate, almond, date, molasses,\n  magnolia in ...
+2025-05-27 16:16:27,764 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:27,765 - src.logger.custom_logger - INFO - Generated explanation: This coffee presents a balanced and sweet-toned profile, featuring notes of molasses and date, aligning with your preference for high sweetness. While it has a bittersweet structure, the acidity is described as little perceptible. The baking chocolate and almond notes contribute to a medium level of bitterness, complementing the sweetness. The satiny-smooth mouthfeel enhances the overall balance.
+
+2025-05-27 16:16:27,768 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:27,768 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Rich, resonant, high-toned. Lychee, lilac, chocolate fudge, frankinense,\n  tama...
+2025-05-27 16:16:28,913 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:28,913 - src.logger.custom_logger - INFO - Generated explanation: > This coffee matches your request for high sweetness and high acidity, featuring a "sweet-tart structure" and a profile that makes "good on the promise of the cup's deep sweetness." The description also notes "juicy, bright acidity." While the description doesn't explicitly use the term "bitterness," the presence of chocolate fudge notes suggests a balanced profile that would likely exhibit a medium level of bitterness, complementing the sweetness and acidity.
+
+2025-05-27 16:16:28,930 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:28,934 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Intoxicatingly (though cleanly) fruit-toned. Raspberry coulis,\n  halvah, plumer...
+2025-05-27 16:16:29,854 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:29,854 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your request for high sweetness and high acidity. Its flavor description includes "richly sweet-tart structure with bright, high-toned acidity." While bitterness isn't explicitly mentioned, the overall profile is focused on fruit and sweet-tart notes, suggesting a balanced cup.
+
+2025-05-27 16:16:29,862 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:29,862 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', "Relevant Coffee Information:\n---\nflavor_description: High-toned sweetness, crisply tart, pleasantly salty-edged. Dried\n  apricot, ta...
+2025-05-27 16:16:30,730 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:30,730 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your request for high sweetness, medium bitterness, and high acidity. Its flavor profile features "high-toned sweetness" and "briskly juicy acidity." The presence of "salted chocolate" suggests a balanced bitterness, complementing the overall flavor profile.
+
+2025-05-27 16:16:30,736 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:30,736 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Assertively sweet, fruity, spicy. Ripe\n  banana, baking ...
+2025-05-27 16:16:31,517 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:31,525 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features an assertively sweet profile, aligning with your preference for high sweetness. Additionally, the flavor description mentions lemon drop notes, indicating high acidity, while the baking chocolate hints at a medium level of bitterness.
+
+2025-05-27 16:16:31,529 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:31,529 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: High-toned, richly sweet-tart. Apricot, wild honey, sandalwood,\n  roasted cacao...
+2025-05-27 16:16:32,369 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:32,369 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your preference for high sweetness and high acidity, featuring a "richly sweet-tart" profile with "vibrant, juicy acidity" and a "deep, honeyish sweetness." You'll also find a balanced profile with notes of roasted cacao nib.
+
+2025-05-27 16:16:32,372 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:16:32,382 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: high sweetness, medium bitterness, high acidity', 'Relevant Coffee Information:\n---\nflavor_description: Sweet-toned, fruit-centered. Raisin, brown sugar, lemon zest,\n  prairie flowers...
+2025-05-27 16:16:33,392 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:16:33,392 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your request for high sweetness, medium bitterness, and high acidity because of its "sweet-toned" flavor profile, "sweet structure," and "brisk acidity." The presence of "brown sugar" notes further contributes to the sweetness you're seeking.
+
+2025-05-27 16:31:40,463 - src.logger.custom_logger - INFO - Processing query: chocolate
+2025-05-27 16:31:47,577 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:47,577 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure w...
+2025-05-27 16:31:49,098 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:49,098 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile features prominent chocolate notes, specifically baking chocolate, which aligns directly with your search for "chocolate". The chocolaty finish further enhances this flavor.
+
+2025-05-27 16:31:49,111 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:49,122 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. Sw...
+2025-05-27 16:31:50,030 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:50,032 - src.logger.custom_logger - INFO - Generated explanation: > This coffee is recommended because its flavor profile is described as "chocolaty," featuring notes of baking chocolate. The finish further emphasizes "cedar-toned chocolate," aligning with your search for chocolate flavors.
+
+2025-05-27 16:31:50,032 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:50,032 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hin...
+2025-05-27 16:31:50,690 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:50,694 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile includes baker’s chocolate, aligning with your search for "chocolate." The resonant, long, and lively finish further emphasizes the chocolate notes.
+
+2025-05-27 16:31:50,696 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:50,696 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-to...
+2025-05-27 16:31:51,665 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:51,670 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo is recommended because it features a deep, chocolaty profile. You'll likely appreciate the prominent notes of baking chocolate, which align well with your search for "chocolate." The crisp, chocolaty finish further enhances this flavor.
+
+2025-05-27 16:31:51,676 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:51,679 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet struc...
+2025-05-27 16:31:52,379 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:52,379 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is notably chocolaty, featuring baking chocolate notes. The description highlights a sweet structure and velvety mouthfeel that complements the chocolate character, aligning well with your search for "chocolate".
+
+2025-05-27 16:31:52,386 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:52,388 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar ...
+2025-05-27 16:31:53,297 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:53,311 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a "crisply chocolaty" profile with notes of "baking chocolate," which directly matches your search for "chocolate." It also exhibits a velvety mouthfeel and a "chocolaty-tart finish," further enhancing the chocolate experience.
+
+2025-05-27 16:31:53,312 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:53,312 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune i...
+2025-05-27 16:31:54,191 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:54,191 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features prominent chocolate notes, described as "dark chocolate" in both aroma and cup. The "chocolaty, slightly smoky finish" further complements your search for chocolate flavors.
+
+2025-05-27 16:31:54,199 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:54,199 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in a...
+2025-05-27 16:31:55,148 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:55,148 - src.logger.custom_logger - INFO - Generated explanation: This espresso blend is recommended because it features prominent chocolate notes, specifically chocolate fudge, which aligns with your search for "chocolate". The description also highlights a chocolaty, fruit-forward finish, further enhancing the chocolate experience. The review notes that milk amplifies and deepens the chocolate notes.
+
+2025-05-27 16:31:55,148 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:55,148 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in ...
+2025-05-27 16:31:56,173 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:56,173 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features a pronounced chocolate flavor, described as "chocolaty" and "dark chocolate" in both aroma and taste. The description specifically highlights its chocolate notes, especially when enjoyed as espresso or with milk.
+
+2025-05-27 16:31:56,181 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:31:56,181 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: chocolate', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cut...
+2025-05-27 16:31:57,096 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:31:57,096 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because it features prominent chocolate notes, described as "chocolaty" and "baking chocolate," which directly matches your search for "chocolate." The flavor profile also includes a "chocolaty, nut-toned finish," further enhancing the chocolate experience.
+
+2025-05-27 16:32:32,488 - src.logger.custom_logger - INFO - Processing query: schokolade
+2025-05-27 16:32:35,592 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:35,596 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure ...
+2025-05-27 16:32:36,445 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:36,445 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because of its pronounced chocolaty notes. The flavor description highlights baking chocolate in both the aroma and cup, with a richly nut-framed finish, aligning well with your search for "schokolade" (chocolate).
+
+2025-05-27 16:32:36,445 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:36,445 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. S...
+2025-05-27 16:32:37,337 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:37,343 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your interest in "schokolade" (chocolate) with its distinct chocolaty profile. You'll find notes of baking chocolate and cedar-toned chocolate, complemented by a smooth, velvety mouthfeel that enhances the overall chocolate experience.
+
+2025-05-27 16:32:37,349 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:37,353 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hi...
+2025-05-27 16:32:38,263 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:38,263 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile features baker's chocolate, aligning with your search for "schokolade" (chocolate). The description also highlights a resonant, long, lively finish with chocolate notes, further supporting the match.
+
+2025-05-27 16:32:38,269 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:38,270 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-t...
+2025-05-27 16:32:39,182 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:39,182 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo is recommended because its flavor profile is deeply chocolaty, featuring notes of baking chocolate. The crisp, chocolaty finish with undertones of almond and date further complements your search for "schokolade" (chocolate).
+
+2025-05-27 16:32:39,182 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:39,182 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet stru...
+2025-05-27 16:32:39,996 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:39,996 - src.logger.custom_logger - INFO - Generated explanation: > This coffee matches your search for "schokolade" (chocolate) because its flavor profile is described as chocolaty, featuring notes of baking chocolate. The gently smoky aromatic wood notes further complement the chocolatey cashew character.
+
+2025-05-27 16:32:40,000 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:40,000 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar...
+2025-05-27 16:32:40,829 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:32:40,829 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend features a "crisply chocolaty" profile and notes of "baking chocolate," making it a great match for your search for "schokolade" (chocolate). The description highlights that chocolate is a dominant flavor, especially when enjoyed with milk.
+
+2025-05-27 16:32:40,835 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:40,835 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune ...
+2025-05-27 16:32:41,111 - src.logger.custom_logger - ERROR - Error during Gemini API inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\inference\llm_inference.py", line 62, in inference
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-05-27 16:32:41,146 - src.logger.custom_logger - INFO - Generated explanation: An error occurred during inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-05-27 16:32:41,147 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:41,147 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in ...
+2025-05-27 16:32:41,411 - src.logger.custom_logger - ERROR - Error during Gemini API inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\inference\llm_inference.py", line 62, in inference
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-05-27 16:32:41,415 - src.logger.custom_logger - INFO - Generated explanation: An error occurred during inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 19
+}
+]
+2025-05-27 16:32:41,430 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:41,430 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in...
+2025-05-27 16:32:41,677 - src.logger.custom_logger - ERROR - Error during Gemini API inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\inference\llm_inference.py", line 62, in inference
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-05-27 16:32:41,686 - src.logger.custom_logger - INFO - Generated explanation: An error occurred during inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-05-27 16:32:41,693 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:32:41,693 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cu...
+2025-05-27 16:32:41,978 - src.logger.custom_logger - ERROR - Error during Gemini API inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\inference\llm_inference.py", line 62, in inference
+    response = self.model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\.venv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-05-27 16:32:41,978 - src.logger.custom_logger - INFO - Generated explanation: An error occurred during inference: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 15
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+2025-05-27 16:33:23,026 - src.logger.custom_logger - INFO - logger setup completed with log file at C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\logs/logs.log.
+2025-05-27 16:33:23,026 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:33:23,026 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 16:33:23,026 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:33:23,027 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 16:33:23,027 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:33:24,792 - src.logger.custom_logger - INFO - SQLRecordManager initialized with namespace: coffee_beans_large
+2025-05-27 16:33:24,792 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:33:24,792 - src.logger.custom_logger - INFO - Initializing VectorStore...
+2025-05-27 16:33:24,856 - src.logger.custom_logger - INFO - Pinecone client initialized successfully.
+2025-05-27 16:33:24,857 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:33:43,813 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:33:45,717 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:33:45,718 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:33:45,718 - src.logger.custom_logger - INFO - Creating vector store with Hugging Face embeddings...
+2025-05-27 16:33:50,805 - src.logger.custom_logger - INFO - Initializing index: coffee-beans-large-index
+2025-05-27 16:33:51,178 - src.logger.custom_logger - INFO - Index coffee-beans-large-index initialized successfully.
+2025-05-27 16:33:51,179 - src.logger.custom_logger - INFO - Vector store created successfully.
+2025-05-27 16:33:51,181 - src.logger.custom_logger - INFO - Index class initialized successfully.
+2025-05-27 16:33:51,181 - src.logger.custom_logger - INFO - Starting the coffee review index process...
+2025-05-27 16:33:52,091 - src.logger.custom_logger - INFO - Adding document chunks to the index...
+2025-05-27 16:33:53,553 - src.logger.custom_logger - INFO - Document chunks added to the index successfully.
+2025-05-27 16:34:11,662 - src.logger.custom_logger - INFO - Indexed 2095 structured docs into Elastic Cloud.
+2025-05-27 16:34:11,664 - src.logger.custom_logger - INFO - Indexing completed successfully.
+2025-05-27 16:34:11,664 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:34:11,665 - src.logger.custom_logger - INFO - Initializing Retriever class.
+2025-05-27 16:34:11,666 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:34:11,666 - src.logger.custom_logger - INFO - Loading system prompt text from C:\Users\nikla\LRZ Sync+Share\Dokumente\Studium\Master\Semester_3\webIR\coffee_bean_search_engine\src\prompt_templates\system_prompt.yaml...
+2025-05-27 16:34:11,673 - src.logger.custom_logger - INFO - System prompt text loaded successfully.
+2025-05-27 16:34:11,673 - src.logger.custom_logger - INFO - PromptBuilder initialized successfully with system prompt.
+2025-05-27 16:34:11,674 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:34:11,675 - src.logger.custom_logger - INFO - GenerativeModel 'gemini-2.0-flash' initialized successfully with system instruction.
+2025-05-27 16:34:11,675 - src.logger.custom_logger - INFO - Search Engine initialized successfully.
+2025-05-27 16:34:11,675 - src.logger.custom_logger - INFO - Processing query: schokolade
+2025-05-27 16:35:27,034 - src.logger.custom_logger - INFO - Processing query: schokolade
+2025-05-27 16:35:32,774 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:32,776 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure ...
+2025-05-27 16:35:33,784 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:33,784 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because its flavor profile is described as chocolaty, featuring notes of baking chocolate in both aroma and cup. This aligns directly with your search for "schokolade" (chocolate).
+
+2025-05-27 16:35:35,428 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:35,435 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. S...
+2025-05-27 16:35:36,342 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:36,342 - src.logger.custom_logger - INFO - Generated explanation: This coffee matches your search for "schokolade" (chocolate) because it features a distinct chocolaty profile, specifically baking chocolate, complemented by notes of hazelnut and vanilla bean. The finish also highlights cedar-toned chocolate, further emphasizing the chocolate character.
+
+2025-05-27 16:35:37,895 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:37,895 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hi...
+2025-05-27 16:35:38,709 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:38,709 - src.logger.custom_logger - INFO - Generated explanation: > This coffee matches your search for "schokolade" (chocolate) because its flavor description includes baker's chocolate notes. The "chocolate moves forward in a resonant, long, lively finish," further emphasizing the chocolate character.
+
+2025-05-27 16:35:40,143 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:40,148 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-t...
+2025-05-27 16:35:41,059 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:41,059 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo coffee is recommended due to its pronounced chocolaty notes, including baking chocolate, which aligns directly with your search for "schokolade" (chocolate). The crisp, chocolaty finish further enhances this profile.
+
+2025-05-27 16:35:42,500 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:42,500 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet stru...
+2025-05-27 16:35:43,323 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:43,323 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile is described as "chocolaty," featuring notes of baking chocolate in both aroma and cup. This aligns directly with your search for "schokolade" (German for chocolate).
+
+2025-05-27 16:35:45,023 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:45,023 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar...
+2025-05-27 16:35:45,975 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:45,975 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended for its distinct chocolaty notes, including baking chocolate. The description highlights that chocolate richly dominates the flavor, especially when prepared with milk, making it a great choice for your search for "schokolade" (chocolate).
+
+2025-05-27 16:35:47,511 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:47,511 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in ...
+2025-05-27 16:35:48,309 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:48,309 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features a distinct chocolaty profile, including notes of chocolate fudge, aligning with your search for "schokolade" (chocolate). The creamy mouthfeel further complements the rich chocolate experience.
+
+2025-05-27 16:35:49,973 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:49,978 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune ...
+2025-05-27 16:35:50,889 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:50,893 - src.logger.custom_logger - INFO - Generated explanation: > This coffee is recommended because it features a pronounced chocolaty profile, including notes of dark chocolate, which matches your search for "schokolade" (chocolate). The roast-rounded character and creamy mouthfeel further enhance the chocolate experience.
+
+2025-05-27 16:35:52,430 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:52,430 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in...
+2025-05-27 16:35:53,442 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:53,442 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended for its pronounced chocolate notes. The flavor description highlights a "chocolaty" profile, with specific mentions of "dark chocolate" in the aroma and cup, aligning with your search for "schokolade" (chocolate). It also maintains chocolate notes even in milk.
+
+2025-05-27 16:35:54,929 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:35:54,931 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cu...
+2025-05-27 16:35:55,911 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:35:55,912 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it has a pronounced chocolaty profile, which aligns with your search for "schokolade" (chocolate). You can expect notes of baking chocolate enhanced by a smooth mouthfeel and nut-toned finish.
+
+2025-05-27 16:36:28,709 - src.logger.custom_logger - INFO - Processing query: schokolade
+2025-05-27 16:36:32,165 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:32,165 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Chocolaty, deep-toned. Baking chocolate, hazelnut, gardenia, molasses,\n  cedar in aroma and cup. Sweet in structure ...
+2025-05-27 16:36:33,175 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:33,175 - src.logger.custom_logger - INFO - Generated explanation: This Peru Finca Churupampa coffee is recommended because its flavor profile emphasizes a distinct chocolaty taste, which directly matches your search for "schokolade" (chocolate). You can expect a deep-toned chocolate experience complemented by hazelnut notes.
+
+2025-05-27 16:36:34,723 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:34,723 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, hazelnut, vanilla\n  bean, persimmon, fresh-cut cedar in aroma and cup. S...
+2025-05-27 16:36:35,742 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:35,742 - src.logger.custom_logger - INFO - Generated explanation: This coffee is recommended because its flavor profile includes prominent chocolaty notes, specifically baking chocolate, which aligns directly with your search for "schokolade" (chocolate). The finish further emphasizes this with suggestions of cedar-toned chocolate.
+
+2025-05-27 16:36:37,274 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:37,274 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', "Relevant Coffee Information:\n---\nflavor_description: 'Intense; deep, spice-complicated sweetness. Black currant, baker’s\n  chocolate, peppercorn medley, black sage, a hi...
+2025-05-27 16:36:38,200 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:38,200 - src.logger.custom_logger - INFO - Generated explanation: > This coffee is recommended because its flavor profile features baker's chocolate, aligning with your search for "schokolade" (chocolate). The deep, spice-complicated sweetness and resonant finish further enhance the chocolate notes.
+
+2025-05-27 16:36:39,842 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:39,842 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Deep-toned, chocolaty. Baking chocolate, date, almond butter,\n  fresh-cut oak, agave syrup in aroma and cup. Sweet-t...
+2025-05-27 16:36:40,707 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:40,710 - src.logger.custom_logger - INFO - Generated explanation: This Ethiopia Sidamo Natural Water Decaf is recommended because of its pronounced chocolaty notes, including baking chocolate. The crisp, chocolaty finish with undertones of almond and date further supports this recommendation.
+
+2025-05-27 16:36:42,415 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:42,415 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Crisply sweet, chocolaty. Baking chocolate, gently scorched fir,\n  raisin, lily, cashew in aroma and cup. Sweet stru...
+2025-05-27 16:36:43,159 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:43,160 - src.logger.custom_logger - INFO - Generated explanation: > This coffee is recommended because its flavor profile is described as "chocolaty," featuring notes of baking chocolate. This aligns with your search for "schokolade" (German for chocolate).
+
+2025-05-27 16:36:44,676 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:44,681 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Crisply chocolaty, citrus-toned. Baking\n  chocolate, grapefruit zest, marjoram, almond, cedar...
+2025-05-27 16:36:45,861 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:45,861 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features a crisply chocolaty profile, including notes of baking chocolate, which aligns with your search for "schokolade" (chocolate). The chocolate richness is particularly pronounced when enjoyed with milk.
+
+2025-05-27 16:36:47,529 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:47,530 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Juicy-bright, chocolaty; chocolate fudge,\n  black cherry, honeysuckle, cedar, maple syrup in ...
+2025-05-27 16:36:48,342 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:48,342 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features prominent chocolaty notes, including chocolate fudge. The reviewer also notes that milk amplifies and deepens the chocolate notes, which aligns well with your search for "schokolade" (chocolate).
+
+2025-05-27 16:36:49,892 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:49,892 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Roast-rounded, chocolaty. Dark chocolate,\n  gardenia, gently scorched cedar, molasses, prune ...
+2025-05-27 16:36:50,707 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:50,707 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features prominent chocolate notes, described as "dark chocolate" in both aroma and taste. The "chocolaty" finish and creamy mouthfeel further complement your search for "schokolade" (chocolate).
+
+2025-05-27 16:36:52,262 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:52,263 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Bittersweet, richly pungent, chocolaty\n  and floral. Dark chocolate, plum, cedar, magnolia in...
+2025-05-27 16:36:53,141 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:53,141 - src.logger.custom_logger - INFO - Generated explanation: > This coffee is recommended because it features a richly pungent and chocolaty profile, with notes of dark chocolate prominent in the aroma and finish. The flavor profile is especially pronounced when prepared as espresso or with milk.
+
+2025-05-27 16:36:54,896 - src.logger.custom_logger - INFO - Created user content parts with query and document context.
+2025-05-27 16:36:54,896 - src.logger.custom_logger - INFO - Starting inference with user content: ['User Query: schokolade', 'Relevant Coffee Information:\n---\nflavor_description: Evaluated as espresso. Chocolaty, gently bittersweet. Pomegranate,\n  baking chocolate, black walnut, clove, fresh-cu...
+2025-05-27 16:36:55,910 - src.logger.custom_logger - INFO - Inference completed successfully.
+2025-05-27 16:36:55,910 - src.logger.custom_logger - INFO - Generated explanation: > This espresso blend is recommended because it features prominent chocolate notes, aligning with your search for "schokolade" (German for chocolate). You can expect a chocolaty profile, which is amplified in milk, alongside complementary nut tones.
+
+2025-05-27 16:51:56,997 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:51:56,997 - src.logger.custom_logger - INFO - Initializing Search Engine...
+2025-05-27 16:51:56,997 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.
+2025-05-27 16:51:56,997 - src.logger.custom_logger - INFO - Initializing Index class...
+2025-05-27 16:51:56,997 - src.logger.custom_logger - INFO - Custom Logger initialized successfully.

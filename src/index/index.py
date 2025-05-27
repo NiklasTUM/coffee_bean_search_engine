@@ -173,6 +173,7 @@ class Index:
                 for idx, (_, row) in enumerate(df.iterrows())
             ]
 
+            self.chunks = documents
             self.add_chunk_to_index(documents)
             self.add_to_elasticsearch(documents)  # NEW
 

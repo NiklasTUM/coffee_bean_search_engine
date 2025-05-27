@@ -34,6 +34,7 @@ class SearchEngine:
         self.logger.info("Initializing Search Engine...")
 
         self.index = Index()
+        self.index.index_documents()
         self.retriever = Retriever(self.index)
         self.prompt_builder = PromptBuilder()
         self.llm_inference = LLMInference(
@@ -63,6 +64,7 @@ class SearchEngine:
             # filter search results
             filtered_results = self.filter_results(unique_results, filters)
 
+            print(filtered_results)
             return filtered_results[:self.num_of_search_results]
 
         except Exception as e:
@@ -119,7 +121,7 @@ class SearchEngine:
 
 if __name__ == "__main__":
     search_engine = SearchEngine()
-    query = "fruit"
+    query = "schokolade"
     filters = {
         "roast": "Dark",
     }
