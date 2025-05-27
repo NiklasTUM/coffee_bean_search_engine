@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
 
-from src.logger.CustomLogger import CustomLogger
+from src.logger.custom_logger import CustomLogger
 from src.constants import constants
 
 

@@ -31,7 +31,9 @@ class SearchEngineChain:
         self.logger.info("Initializing RAGChain...")
 
         self.index = Index(self.logger)
-        self.retriever = Retriever(self.logger, self.index)
+        self.index.index_documents()      
+        #self.retriever = Retriever(self.logger, self.index)
+        self.retriever = Retriever(logger=self.logger, index=self.index)
         self.answer_generator = LLMInference(self.logger)
         self.system_prompt = self.load_system_prompt()
 
@@ -63,17 +65,31 @@ class SearchEngineChain:
         return self.system_prompt
 
     @staticmethod
+    # def format_docs(docs) -> str:
+    #     """
+    #     Formats a list of documents into a single string by concatenating their contents.
+
+    #     Args:
+    #         docs (list[Document]): A list of Document objects.
+
+    #     Returns:
+    #         str: A single string containing the concatenated contents of the documents.
+    #     """
+    #     return "\n\n".join(doc.page_content for doc in docs)
     def format_docs(docs) -> str:
-        """
-        Formats a list of documents into a single string by concatenating their contents.
+        lines = []
+        for i, doc in enumerate(docs, 1):
+            # Extract fields from metadata (added during indexing)
+            meta = doc.metadata
+            name = meta.get("name", "Unknown")
+            origin = meta.get("origin", "Unknown")
+            roast = meta.get("roast", "Unknown")
+            roaster = meta.get("roaster", "Unknown")
 
-        Args:
-            docs (list[Document]): A list of Document objects.
-
-        Returns:
-            str: A single string containing the concatenated contents of the documents.
-        """
-        return "\n\n".join(doc.page_content for doc in docs)
+            lines.append(
+                f"{i}. {name}\n   Origin: {origin}\n   Roast: {roast}\n   Roaster: {roaster}"
+            )
+        return "\n\n".join(lines)
 
     def create_prompt(self, context: str, question: str) -> list[dict]:
         """
@@ -106,7 +122,8 @@ class SearchEngineChain:
         """
         try:
             self.logger.info(f"Processing question: {question}")
-            retrieved_context = self.retriever.ensemble_retriever.invoke(question)
+            #retrieved_context = self.retriever.ensemble_retriever.invoke(question)
+            retrieved_context = self.retriever.retrieve(question)
             formatted_context = self.format_docs(retrieved_context)
             self.logger.info(f"Retrieved {len(retrieved_context)} chunks.")
             self.logger.info(f"Retrieved Context: {formatted_context}")
@@ -130,4 +147,34 @@ class SearchEngineChain:
             self.logger.error(f"Error updating the document index: {e}")
             raise
 
+    def explain_match(self, doc, query: str) -> str:
+        """
+        Uses LLMInference to briefly explain why a coffee matches the user's query,
+        and mention one potential drawback the user might not like.
+        """
+        try:
+            self.logger.info("Generating match explanation via LLM.")
+            context = doc.page_content
+            prompt = [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a coffee expert assistant helping users understand why a coffee bean matches their preferences. "
+                        "Be brief and specific. Highlight the match and also mention one possible downside the user may not like, if any. "
+                        "Your tone should be helpful and factual."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": (
+                        f"User query:\n{query}\n\n"
+                        f"Coffee description:\n{context}\n\n"
+                        f"In 3–4 sentences, explain why this coffee matches the query, and mention one thing the user might dislike."
+                    )
+                }
+            ]
+            return self.answer_generator.inference(prompt)
+        except Exception as e:
+            self.logger.error(f"Failed to generate explanation: {e}")
+            return "Could not generate explanation due to connection error."
 

@@ -12,79 +12,50 @@ from src.index.index import Index
 
 
 class Retriever:
-    def __init__(self, logger: Logger = None, index: Index = None):
+    def __init__(self, logger: Logger = None, index: Index = None, vector_weight: float = 0.7, bm25_weight: float = 0.3):
         """
-        Initializes the Retriever class with logging and vector store setup.
+        Hybrid Retriever combining semantic vector search (Pinecone) and lexical BM25 search.
         """
-        self.logger = logger or CustomLogger('../../logs', 'logs.log').logger
+        self.logger = logger or RAGLogger('../../logs', 'RAG.log').logger
         self.logger.info("Initializing Retriever class.")
-        logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
 
-        self.index = index
-        self.retriever_from_llm = self.initialize_retriever()
-        self.bm25_retriever = self.initialize_bm25_retriever()
+        self.index = index or Index()
+        self.vector_weight = vector_weight
+        self.bm25_weight = bm25_weight
+
+        self.vector_retriever = self.index.vector_store.as_retriever()
+        self.bm25_retriever = BM25Retriever.from_documents(self.index.chunks)
         self.ensemble_retriever = self.initialize_ensemble_retriever()
 
-    def initialize_retriever(self):
+
+    def initialize_ensemble_retriever(self):
         """
-        Initializes a MultiQueryRetriever using a remote LLM via a REST API.
-
-        Returns:
-            MultiQueryRetriever: The initialized retrieve.
+        Combine vector and BM25 retrievers using weighted ensemble.
         """
-        try:
-            self.logger.info("Initializing MultiQueryRetriever.")
-            logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
-
-            def llm(prompt) -> str:
-                self.logger.info(f"Processing prompt: {prompt}")
-                if isinstance(prompt, StringPromptValue):
-                    prompt_text = prompt.text
-                else:
-                    prompt_text = str(prompt)
-
-                formatted_prompt = [{"role": "user", "content": prompt_text}]
-                response = LLMInference().inference(formatted_prompt)
-                return response
-
-            retriever_from_llm = MultiQueryRetriever.from_llm(
-                retriever=self.index.vector_store.as_retriever(), llm=llm
-            )
-
-            self.logger.info("MultiQueryRetriever initialized successfully.")
-
-            return retriever_from_llm
-
-        except Exception as e:
-            self.logger.error(f"Failed to initialize MultiQueryRetriever: {e}")
-            raise
-
-    def initialize_bm25_retriever(self):
-        bm25_retriever = BM25Retriever.from_documents(self.index.chunks)
-        return bm25_retriever
-
-    # def initialize_ensemble_retriever(self):
-    #     ensemble_retriever = EnsembleRetriever(retrievers=[
-    #         self.retriever_from_llm,
-    #         self.bm25_retriever
-    #         ],
-    #         weights=[0.7, 0.3]
-    #     )
-
-    #     return ensemble_retriever
-
-    def initialize_ensemble_retriever(self, vector_weight=0.7, bm25_weight=0.3):
-        ensemble_retriever = EnsembleRetriever(
-            retrievers=[self.retriever_from_llm, self.bm25_retriever],
-            weights=[vector_weight, bm25_weight]
+        return EnsembleRetriever(
+            retrievers=[self.vector_retriever, self.bm25_retriever],
+            weights=[self.vector_weight, self.bm25_weight]
         )
-        return ensemble_retriever
+
+    def retrieve(self, query: str):
+        """
+        Perform a hybrid retrieval on the given query.
+        """
+        return self.ensemble_retriever.invoke(query)
+
 
 if __name__ == '__main__':
+    # index = Index()
+    # retriever_instance = Retriever(index=index)
+    # # retriever = retriever_instance.ensemble_retriever
+    # retriever = retriever_instance.initialize_ensemble_retriever(0.6, 0.4)
+    # retrieved_passages = retriever.invoke(full_query)
+    # print(retrieved_passages)
 
-    index = Index()
-    retriever_instance = Retriever(index=index)
-    # retriever = retriever_instance.ensemble_retriever
-    retriever = retriever_instance.initialize_ensemble_retriever(0.6, 0.4)
-    retrieved_passages = retriever.invoke(full_query)
-    print(retrieved_passages)
+    retriever = Retriever()
+    while True:
+        user_query = input("Enter a flavor profile or adjective query: ")
+        results = retriever.retrieve(user_query)
+        print("\nTop matching documents:\n")
+        for i, doc in enumerate(results, 1):
+            print(f"{i}. {doc.page_content[:150]}...")  # print preview

@@ -63,6 +63,15 @@ class Index:
         logger.info(f"SQLRecordManager initialized with namespace: {namespace}")
         return record_manager
 
+    # def row_to_document(self, row, idx=None) -> Document:
+    #     row_clean = row.fillna("")
+
+    #     page_content = str(row_clean["review"]).strip()
+    #     metadata = row_clean.drop("review").to_dict()
+    #     metadata["source"] = f"review_{idx}"
+
+    #     return Document(page_content=page_content, metadata=metadata)
+
     def row_to_document(self, row, idx=None) -> Document:
         row_clean = row.fillna("")
 
@@ -70,7 +79,13 @@ class Index:
         metadata = row_clean.drop("review").to_dict()
         metadata["source"] = f"review_{idx}"
 
+        # Suppose your CSV has these already; otherwise, you’ll need to generate them
+        # e.g. via a small LLM-inference that rates each review 0–10 on each axis:
+        metadata["sweetness_score"]  = float(row_clean.get("sweetness_score", 5))
+        metadata["bitterness_score"] = float(row_clean.get("bitterness_score",5))
+        metadata["acidity_score"]   = float(row_clean.get("acidity_score",5))
         return Document(page_content=page_content, metadata=metadata)
+
 
     def add_chunk_to_index(self, chunk_doc: list[Document]):
         """

@@ -3,10 +3,13 @@ import os
 from logging import Logger
 from typing import List, Dict
 from huggingface_hub import InferenceClient
-
+import time
+import requests
 from src.logger.custom_logger import CustomLogger
 from src.constants import constants
-
+import httpx  
+from requests.exceptions import RequestException
+from ssl import SSLError
 
 class LLMInference:
     """
@@ -51,30 +54,75 @@ class LLMInference:
             self.logger.error(f"Failed to initialize InferenceClient: {e}")
             raise
 
+    # def inference(self, prompt: List[Dict[str, str]]) -> str:
+    #     """
+    #     Generates a response from the language model based on the provided prompt.
+
+    #     Args:
+    #         prompt (list[dict]): A list of dictionaries representing the single prompt.
+
+    #     Returns:
+    #         str: The generated response from the language model.
+    #     """
+    #     max_retries = 3
+    #     retry_delay = 2  # seconds
+
+    #     for attempt in range(max_retries):
+    #         try:
+    #             self.logger.info(f"Starting inference (attempt {attempt + 1})")
+    #             output = ""
+    #             for message in self.client.chat_completion(
+    #                     messages=prompt,
+    #                     max_tokens=8192,
+    #                     stream=True,
+    #             ):
+    #                 output += message.choices[0].delta.content
+    #             self.logger.info("Inference completed successfully.")
+    #             return output
+    #         except (requests.exceptions.RequestException, Exception) as e:
+    #             self.logger.error(f"Inference failed (attempt {attempt + 1}): {e}")
+    #             if attempt < max_retries - 1:
+    #                 time.sleep(retry_delay)
+    #                 retry_delay *= 2  # exponential backoff
+    #             else:
+    #                 self.logger.error("Max retries exceeded. Giving up.")
+    #                 raise
     def inference(self, prompt: List[Dict[str, str]]) -> str:
         """
-        Generates a response from the language model based on the provided prompt.
-
-        Args:
-            prompt (list[dict]): A list of dictionaries representing the single prompt.
-
-        Returns:
-            str: The generated response from the language model.
+        Generates a response from the language model with robust retry logic on network failures.
         """
-        try:
-            self.logger.info(f"Starting inference")
-            output = ""
-            for message in self.client.chat_completion(
+        max_retries = 3
+        retry_delay = 2  # seconds
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                self.logger.info(f"Starting inference (attempt {attempt})")
+
+                output = ""
+                # Actual API call (streamed)
+                for message in self.client.chat_completion(
                     messages=prompt,
                     max_tokens=8192,
                     stream=True,
-            ):
-                output += message.choices[0].delta.content
-            self.logger.info("Inference completed successfully.")
-            return output
-        except Exception as e:
-            self.logger.error(f"Error during inference: {e}")
-            raise
+                ):
+                    output += message.choices[0].delta.content
+
+                self.logger.info("Inference completed successfully.")
+                return output
+
+            except (httpx.HTTPError, RequestException, ConnectionError, SSLError) as e:
+                self.logger.error(f"Inference failed (attempt {attempt}): {e}")
+                if attempt < max_retries:
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # exponential backoff
+                else:
+                    self.logger.error("Max retries exceeded. Giving up.")
+                    raise
+
+            except Exception as e:
+                # Catches unexpected things like JSON decode or attribute errors
+                self.logger.error(f"Unexpected error during inference (attempt {attempt}): {e}")
+                raise
 
 
 if __name__ == "__main__":
