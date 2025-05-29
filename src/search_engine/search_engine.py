@@ -2,7 +2,6 @@ import os
 from typing import List
 
 from langchain_core.documents import Document
-
 from src.constants import constants
 from src.index.index import Index
 from src.inference.llm_inference import LLMInference
@@ -41,18 +40,19 @@ class SearchEngine:
             system_instruction=self.prompt_builder.get_system_prompt(),
             model_name="gemini-2.0-flash"
         )
-        self.translator = Translator()
+        #self.translator = Translator()
         self.num_of_search_results = 10
         self.num_of_unfiltered_search_results = 200
         self.user_language = "en"
         self.logger.info("Search Engine initialized successfully.")
 
     def search(self, query: str, filters: dict[str, str]) -> list[Document]:
+
         try:
             self.logger.info(f"Processing query: {query}")
-            translation_dict = self.translator.translate_text(query, "en")
-            query = translation_dict["translated_text"]
-            self.user_language = translation_dict["detected_source_language"]
+            #translation_dict = self.translator.translate_text(query, "en")
+            #query = translation_dict["translated_text"]
+            #self.user_language = translation_dict["detected_source_language"]
             search_results = self.retriever.ensemble_retriever.invoke(
                 query,
                 config={"k": self.num_of_unfiltered_search_results}
@@ -123,12 +123,12 @@ if __name__ == "__main__":
     search_engine = SearchEngine()
     query = "schokolade"
     filters = {
-        "roast": "Dark",
+        "roast": "Medium-Light",
     }
 
     results = search_engine.search(query, filters)
     for result in results:
         print(result)
-    explanation = search_engine.explain_result(query, results[0])
-    translation_dict = search_engine.translator.translate_text(explanation, target_language=search_engine.user_language)
-    print(translation_dict["translated_text"])
+    #explanation = search_engine.explain_result(query, results[0])
+    #translation_dict = search_engine.translator.translate_text(explanation, target_language=search_engine.user_language)
+    #print(explanation)
