@@ -29,7 +29,6 @@ class Index:
         Initializes the Index class, setting up the logger, record manager, vector store,
         data loader.
 
-
         """
         self.log_dir = os.path.join(constants.root_dir, "logs")
         self.logger = CustomLogger(self.log_dir, "logs.log").logger
@@ -174,8 +173,8 @@ class Index:
             ]
 
             self.chunks = documents
-            self.add_chunk_to_index(documents)
-            self.add_to_elasticsearch(documents)  # NEW
+            # self.add_chunk_to_index(documents)
+            # self.add_to_elasticsearch(documents)
 
             self.logger.info("Indexing completed successfully.")
         except Exception as e:
